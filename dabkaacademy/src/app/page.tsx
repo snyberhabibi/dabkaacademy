@@ -154,13 +154,13 @@ export default function Home() {
 
               {/* Massive Headline */}
               <h1 className="mb-6 sm:mb-8">
-                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase text-[#1a1a1a] tracking-tighter">
+                <span className="block text-[clamp(2rem,7vw,7rem)] leading-[0.9] font-black uppercase text-[#1a1a1a] tracking-tighter">
                   Master
                 </span>
-                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase text-[#1a1a1a] tracking-tighter">
+                <span className="block text-[clamp(2rem,7vw,7rem)] leading-[0.9] font-black uppercase text-[#1a1a1a] tracking-tighter">
                   The Art
                 </span>
-                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase tracking-tighter">
+                <span className="block text-[clamp(2rem,7vw,7rem)] leading-[0.9] font-black uppercase tracking-tighter">
                   Of <span className="text-[#CE1126]">Dabka</span>
                 </span>
               </h1>

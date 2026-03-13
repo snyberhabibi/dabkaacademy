@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,12 +23,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <span className="text-xl sm:text-2xl font-black tracking-tight text-[#1a1a1a] uppercase hover-glitch">
-              DABKA
-              <span className="text-[#CE1126]"> ACADEMY</span>
-            </span>
-          </Link>
+          <Logo variant="light" size="md" />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
