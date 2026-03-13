@@ -107,14 +107,14 @@ const cities = [
 
 function SkillBadge({ level }: { level: SkillLevel }) {
   const colors = {
-    Beginner: "bg-[#2a9d8f]/20 text-[#2a9d8f] border-[#2a9d8f]/30",
-    Advanced: "bg-[#e63946]/20 text-[#e63946] border-[#e63946]/30",
-    "All Levels": "bg-[#fafafa]/10 text-[#fafafa] border-[#fafafa]/20",
+    Beginner: "bg-[#007A3D]/10 text-[#007A3D] border-[#007A3D]/30",
+    Advanced: "bg-[#CE1126]/10 text-[#CE1126] border-[#CE1126]/30",
+    "All Levels": "bg-[#1a1a1a]/10 text-[#1a1a1a] border-[#1a1a1a]/20",
   };
 
   return (
     <span
-      className={`px-3 py-1 text-xs font-bold uppercase tracking-wide border ${colors[level]}`}
+      className={`px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wide border whitespace-nowrap ${colors[level]}`}
     >
       {level}
     </span>
@@ -127,53 +127,53 @@ function ClassCard({ classData }: { classData: DabkaClass }) {
   const isLowSpots = classData.spotsRemaining <= 5;
 
   return (
-    <div className="bg-[#141414] border border-[#27272a] p-6 hover:border-[#e63946]/50 transition-all duration-300 group">
+    <div className="bg-[#ffffff] border border-[#e5e7eb] p-4 sm:p-6 hover:border-[#CE1126]/50 transition-all duration-300 group">
       {/* City Name */}
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="text-3xl md:text-4xl font-black tracking-tight text-[#fafafa] group-hover:text-[#e63946] transition-colors">
+      <div className="flex items-start justify-between mb-3 sm:mb-4 gap-2">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#1a1a1a] group-hover:text-[#CE1126] transition-colors">
           {classData.city}
         </h3>
         <SkillBadge level={classData.skillLevel} />
       </div>
 
       {/* Date & Time */}
-      <div className="mb-4">
-        <p className="text-[#fafafa] font-semibold">{classData.date}</p>
-        <p className="text-[#71717a] text-sm">{classData.time}</p>
+      <div className="mb-3 sm:mb-4">
+        <p className="text-sm sm:text-base text-[#1a1a1a] font-semibold">{classData.date}</p>
+        <p className="text-[#6b7280] text-xs sm:text-sm">{classData.time}</p>
       </div>
 
       {/* Venue */}
-      <div className="mb-6">
-        <p className="text-[#71717a] text-sm">{classData.venue}</p>
-        <p className="text-[#71717a] text-xs">{classData.address}</p>
+      <div className="mb-4 sm:mb-6">
+        <p className="text-[#6b7280] text-xs sm:text-sm">{classData.venue}</p>
+        <p className="text-[#6b7280] text-xs">{classData.address}</p>
       </div>
 
       {/* Spots Remaining */}
-      <div className="mb-4">
+      <div className="mb-3 sm:mb-4">
         <div className="flex items-center justify-between mb-2">
           <span
-            className={`text-sm font-medium ${isLowSpots ? "text-[#e63946]" : "text-[#71717a]"}`}
+            className={`text-xs sm:text-sm font-medium ${isLowSpots ? "text-[#CE1126]" : "text-[#6b7280]"}`}
           >
             {classData.spotsRemaining} spots left
           </span>
-          <span className="text-[#71717a] text-xs">
+          <span className="text-[#6b7280] text-xs">
             of {classData.totalSpots}
           </span>
         </div>
-        <div className="h-1 bg-[#27272a] rounded-full overflow-hidden">
+        <div className="h-1 bg-[#e5e7eb] rounded-full overflow-hidden">
           <div
-            className={`h-full transition-all ${isLowSpots ? "bg-[#e63946]" : "bg-[#2a9d8f]"}`}
+            className={`h-full transition-all ${isLowSpots ? "bg-[#CE1126]" : "bg-[#007A3D]"}`}
             style={{ width: `${spotsPercentage}%` }}
           />
         </div>
       </div>
 
       {/* Price & Book Button */}
-      <div className="flex items-center justify-between pt-4 border-t border-[#27272a]">
-        <span className="text-2xl font-black text-[#fafafa]">
+      <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-[#e5e7eb]">
+        <span className="text-xl sm:text-2xl font-black text-[#1a1a1a]">
           ${classData.price}
         </span>
-        <button className="bg-[#e63946] hover:bg-[#d62839] text-[#fafafa] px-6 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors">
+        <button className="bg-[#CE1126] hover:bg-[#a80d1e] text-[#fafafa] px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors min-h-[44px]">
           Book Now
         </button>
       </div>
@@ -209,16 +209,16 @@ export default function ClassesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 sm:pt-32 pb-10 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-[#fafafa] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter text-[#1a1a1a] mb-4 sm:mb-6">
             LEARN IN PERSON
           </h1>
-          <p className="text-[#71717a] text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-[#6b7280] text-sm sm:text-lg md:text-xl max-w-2xl mx-auto px-2">
             Our pop-up dabka classes bring authentic Palestinian dance to cities
             nationwide. Join us for an unforgettable cultural experience.
           </p>
@@ -226,17 +226,17 @@ export default function ClassesPage() {
       </section>
 
       {/* Filter Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-8">
+      <section className="px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#141414] border border-[#27272a] p-4 md:p-6">
-            <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+          <div className="bg-[#ffffff] border border-[#e5e7eb] p-3 sm:p-4 md:p-6">
+            <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-center md:justify-between">
               {/* City Filter */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <div className="relative">
                   <select
                     value={selectedCity}
                     onChange={(e) => setSelectedCity(e.target.value)}
-                    className="appearance-none bg-[#0a0a0a] border border-[#27272a] text-[#fafafa] px-4 py-3 pr-10 text-sm font-medium uppercase tracking-wide focus:outline-none focus:border-[#e63946] cursor-pointer min-w-[180px]"
+                    className="appearance-none bg-[#fafafa] border border-[#e5e7eb] text-[#1a1a1a] px-3 sm:px-4 py-3 pr-10 text-xs sm:text-sm font-medium uppercase tracking-wide focus:outline-none focus:border-[#CE1126] cursor-pointer w-full sm:min-w-[180px] min-h-[48px]"
                   >
                     {cities.map((city) => (
                       <option key={city} value={city}>
@@ -245,7 +245,7 @@ export default function ClassesPage() {
                     ))}
                   </select>
                   <svg
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#71717a] pointer-events-none"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6b7280] pointer-events-none"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -260,7 +260,7 @@ export default function ClassesPage() {
                 </div>
 
                 {/* Date Range (placeholder) */}
-                <button className="flex items-center gap-2 bg-[#0a0a0a] border border-[#27272a] text-[#71717a] px-4 py-3 text-sm font-medium uppercase tracking-wide hover:border-[#e63946] hover:text-[#fafafa] transition-colors">
+                <button className="flex items-center justify-center gap-2 bg-[#fafafa] border border-[#e5e7eb] text-[#6b7280] px-3 sm:px-4 py-3 text-xs sm:text-sm font-medium uppercase tracking-wide hover:border-[#CE1126] hover:text-[#1a1a1a] transition-colors min-h-[48px]">
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -279,33 +279,33 @@ export default function ClassesPage() {
               </div>
 
               {/* Level Tabs */}
-              <div className="flex border border-[#27272a]">
+              <div className="flex border border-[#e5e7eb] overflow-x-auto">
                 <button
                   onClick={() => setActiveTab("all")}
-                  className={`px-4 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors ${
+                  className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors whitespace-nowrap min-h-[44px] ${
                     activeTab === "all"
-                      ? "bg-[#e63946] text-[#fafafa]"
-                      : "bg-transparent text-[#71717a] hover:text-[#fafafa]"
+                      ? "bg-[#CE1126] text-[#fafafa]"
+                      : "bg-transparent text-[#6b7280] hover:text-[#1a1a1a]"
                   }`}
                 >
-                  All Classes
+                  All
                 </button>
                 <button
                   onClick={() => setActiveTab("beginner")}
-                  className={`px-4 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors border-l border-[#27272a] ${
+                  className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors border-l border-[#e5e7eb] whitespace-nowrap min-h-[44px] ${
                     activeTab === "beginner"
-                      ? "bg-[#2a9d8f] text-[#fafafa]"
-                      : "bg-transparent text-[#71717a] hover:text-[#fafafa]"
+                      ? "bg-[#007A3D] text-[#fafafa]"
+                      : "bg-transparent text-[#6b7280] hover:text-[#1a1a1a]"
                   }`}
                 >
                   Beginner
                 </button>
                 <button
                   onClick={() => setActiveTab("advanced")}
-                  className={`px-4 py-2.5 text-sm font-bold uppercase tracking-wide transition-colors border-l border-[#27272a] ${
+                  className={`px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors border-l border-[#e5e7eb] whitespace-nowrap min-h-[44px] ${
                     activeTab === "advanced"
-                      ? "bg-[#e63946] text-[#fafafa]"
-                      : "bg-transparent text-[#71717a] hover:text-[#fafafa]"
+                      ? "bg-[#CE1126] text-[#fafafa]"
+                      : "bg-transparent text-[#6b7280] hover:text-[#1a1a1a]"
                   }`}
                 >
                   Advanced
@@ -317,17 +317,17 @@ export default function ClassesPage() {
       </section>
 
       {/* Classes Grid */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-16">
+      <section className="px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16">
         <div className="max-w-7xl mx-auto">
           {filteredClasses.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {filteredClasses.map((classData) => (
                 <ClassCard key={classData.id} classData={classData} />
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <p className="text-[#71717a] text-lg">
+            <div className="text-center py-10 sm:py-16">
+              <p className="text-[#6b7280] text-sm sm:text-lg">
                 No classes found matching your filters.
               </p>
               <button
@@ -335,7 +335,7 @@ export default function ClassesPage() {
                   setSelectedCity("All Cities");
                   setActiveTab("all");
                 }}
-                className="mt-4 text-[#e63946] font-semibold hover:underline"
+                className="mt-4 text-[#CE1126] text-sm sm:text-base font-semibold hover:underline min-h-[44px]"
               >
                 Clear filters
               </button>
@@ -345,23 +345,23 @@ export default function ClassesPage() {
       </section>
 
       {/* Private Events Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-[#141414]">
+      <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-[#ffffff]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <span className="text-[#e63946] text-sm font-bold uppercase tracking-widest">
+              <span className="text-[#CE1126] text-xs sm:text-sm font-bold uppercase tracking-widest">
                 Private Events
               </span>
-              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-[#fafafa] mt-4 mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-[#1a1a1a] mt-3 sm:mt-4 mb-4 sm:mb-6">
                 BRING DABKA TO YOUR EVENT
               </h2>
-              <p className="text-[#71717a] text-lg mb-8">
+              <p className="text-[#6b7280] text-sm sm:text-lg mb-6 sm:mb-8">
                 Make your wedding, graduation, or cultural celebration
                 unforgettable with a private dabka class. Our instructors travel
                 nationwide to bring authentic Palestinian dance to your special
                 occasion.
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {[
                   "Weddings & engagement parties",
                   "Corporate team building events",
@@ -371,10 +371,10 @@ export default function ClassesPage() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-center gap-3 text-[#fafafa]"
+                    className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]"
                   >
                     <svg
-                      className="w-5 h-5 text-[#2a9d8f]"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -392,16 +392,16 @@ export default function ClassesPage() {
               </ul>
               <a
                 href="mailto:events@dabkaacademy.com"
-                className="inline-block bg-[#e63946] hover:bg-[#d62839] text-[#fafafa] px-8 py-4 text-sm font-bold uppercase tracking-wide transition-colors"
+                className="inline-block w-full sm:w-auto bg-[#CE1126] hover:bg-[#a80d1e] text-[#fafafa] px-6 sm:px-8 py-4 text-sm font-bold uppercase tracking-wide transition-colors text-center min-h-[52px]"
               >
                 Contact Us
               </a>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-[#0a0a0a] border border-[#27272a] flex items-center justify-center">
+            <div className="relative order-first md:order-last">
+              <div className="aspect-square bg-[#fafafa] border border-[#e5e7eb] flex items-center justify-center">
                 <div className="text-center">
                   <svg
-                    className="w-24 h-24 text-[#27272a] mx-auto mb-4"
+                    className="w-16 h-16 sm:w-24 sm:h-24 text-[#e5e7eb] mx-auto mb-3 sm:mb-4"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -413,7 +413,7 @@ export default function ClassesPage() {
                       d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
-                  <p className="text-[#71717a] text-sm uppercase tracking-wide">
+                  <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">
                     Private Event Image
                   </p>
                 </div>
@@ -424,17 +424,17 @@ export default function ClassesPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
+      <section className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#fafafa] mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-[#1a1a1a] mb-3 sm:mb-4">
             GET NOTIFIED ABOUT CLASSES IN YOUR CITY
           </h2>
-          <p className="text-[#71717a] mb-8">
+          <p className="text-sm sm:text-base text-[#6b7280] mb-6 sm:mb-8">
             Be the first to know when we announce new pop-up classes near you.
           </p>
           <form
             onSubmit={handleNewsletterSubmit}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col gap-3 sm:gap-4 sm:flex-row sm:flex-wrap justify-center"
           >
             <input
               type="email"
@@ -442,13 +442,13 @@ export default function ClassesPage() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="bg-[#141414] border border-[#27272a] text-[#fafafa] px-4 py-3 text-sm focus:outline-none focus:border-[#e63946] min-w-[250px] placeholder:text-[#71717a]"
+              className="bg-[#ffffff] border border-[#e5e7eb] text-[#1a1a1a] px-4 py-3 text-sm focus:outline-none focus:border-[#CE1126] w-full sm:min-w-[250px] sm:w-auto placeholder:text-[#6b7280] min-h-[48px]"
             />
-            <div className="relative">
+            <div className="relative w-full sm:w-auto">
               <select
                 value={notifyCity}
                 onChange={(e) => setNotifyCity(e.target.value)}
-                className="appearance-none bg-[#141414] border border-[#27272a] text-[#fafafa] px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#e63946] cursor-pointer min-w-[180px]"
+                className="appearance-none bg-[#ffffff] border border-[#e5e7eb] text-[#1a1a1a] px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#CE1126] cursor-pointer w-full sm:min-w-[180px] min-h-[48px]"
               >
                 <option value="">Select your city</option>
                 {cities.slice(1).map((city) => (
@@ -459,7 +459,7 @@ export default function ClassesPage() {
                 <option value="other">Other</option>
               </select>
               <svg
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#71717a] pointer-events-none"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6b7280] pointer-events-none"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -474,7 +474,7 @@ export default function ClassesPage() {
             </div>
             <button
               type="submit"
-              className="bg-[#e63946] hover:bg-[#d62839] text-[#fafafa] px-8 py-3 text-sm font-bold uppercase tracking-wide transition-colors whitespace-nowrap"
+              className="bg-[#CE1126] hover:bg-[#a80d1e] text-[#fafafa] px-6 sm:px-8 py-3 text-sm font-bold uppercase tracking-wide transition-colors whitespace-nowrap w-full sm:w-auto min-h-[48px]"
             >
               Notify Me
             </button>

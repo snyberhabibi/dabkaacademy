@@ -84,27 +84,27 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
-      <main className="pt-24 pb-16">
+      <main className="pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
-          <div className="mb-10">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mb-6 sm:mb-10">
+            <div className="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="mb-1 text-sm font-medium uppercase tracking-widest text-[#CE1126]">
+                <p className="mb-1 text-xs sm:text-sm font-medium uppercase tracking-widest text-[#CE1126]">
                   Welcome back
                 </p>
-                <h1 className="text-3xl font-black uppercase tracking-tight text-[#1a1a1a] sm:text-4xl">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-[#1a1a1a]">
                   Yusuf
                 </h1>
               </div>
 
               <Link
                 href={nextLesson ? `/lesson/${nextLesson.id}` : "#"}
-                className="group inline-flex items-center gap-3 rounded-none bg-[#CE1126] px-6 py-4 font-bold uppercase tracking-wide text-[#fafafa] transition-all hover:bg-[#a80d1e] hover:gap-4"
+                className="group inline-flex items-center justify-center gap-2 sm:gap-3 rounded-none bg-[#CE1126] px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-wide text-[#fafafa] transition-all hover:bg-[#a80d1e] hover:gap-4 min-h-[48px] w-full sm:w-auto"
               >
                 <span>Continue Learning</span>
                 <svg
-                  className="h-5 w-5 transition-transform group-hover:translate-x-1"
+                  className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -120,16 +120,16 @@ export default function DashboardPage() {
             </div>
 
             {/* Progress Bar */}
-            <div className="mt-8">
-              <div className="mb-2 flex items-center justify-between">
-                <span className="text-sm font-medium text-[#6b7280]">
+            <div className="mt-5 sm:mt-8">
+              <div className="mb-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 sm:gap-0">
+                <span className="text-xs sm:text-sm font-medium text-[#6b7280]">
                   Overall Progress
                 </span>
-                <span className="text-sm font-bold text-[#1a1a1a]">
+                <span className="text-xs sm:text-sm font-bold text-[#1a1a1a]">
                   {completedLessons}/{totalLessons} lessons ({progressPercentage}%)
                 </span>
               </div>
-              <div className="h-3 w-full overflow-hidden bg-[#e5e7eb]">
+              <div className="h-2 sm:h-3 w-full overflow-hidden bg-[#e5e7eb]">
                 <div
                   className="h-full bg-gradient-to-r from-[#CE1126] to-[#ff4d5a] transition-all duration-500"
                   style={{ width: `${progressPercentage}%` }}
@@ -138,9 +138,9 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1fr_320px]">
             {/* Course Chapters */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {courseData.chapters.map((chapter) => {
                 const chapterCompleted = chapter.lessons.filter(
                   (l) => l.completed
@@ -155,24 +155,24 @@ export default function DashboardPage() {
                     {/* Chapter Header */}
                     <button
                       onClick={() => toggleChapter(chapter.id)}
-                      className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-[#f9fafb]"
+                      className="flex w-full items-center justify-between p-3 sm:p-5 text-left transition-colors hover:bg-[#f9fafb] min-h-[56px]"
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-[#fafafa] font-black text-[#1a1a1a]">
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center border border-[#e5e7eb] bg-[#fafafa] font-black text-sm sm:text-base text-[#1a1a1a] flex-shrink-0">
                           {chapter.id}
                         </div>
                         <div>
-                          <h2 className="text-lg font-bold uppercase tracking-wide text-[#1a1a1a]">
+                          <h2 className="text-sm sm:text-lg font-bold uppercase tracking-wide text-[#1a1a1a]">
                             Chapter {chapter.id}: {chapter.title}
                           </h2>
-                          <p className="text-sm text-[#6b7280]">
+                          <p className="text-xs sm:text-sm text-[#6b7280]">
                             {chapterCompleted}/{chapter.lessons.length} lessons
                             completed
                           </p>
                         </div>
                       </div>
                       <svg
-                        className={`h-6 w-6 text-[#6b7280] transition-transform ${
+                        className={`h-5 w-5 sm:h-6 sm:w-6 text-[#6b7280] transition-transform flex-shrink-0 ml-2 ${
                           isExpanded ? "rotate-180" : ""
                         }`}
                         fill="none"
@@ -195,13 +195,13 @@ export default function DashboardPage() {
                           <Link
                             key={lesson.id}
                             href={`/lesson/${lesson.id}`}
-                            className={`flex items-center gap-4 border-b border-[#e5e7eb] p-4 transition-colors last:border-b-0 hover:bg-[#f9fafb] ${
+                            className={`flex items-center gap-2 sm:gap-4 border-b border-[#e5e7eb] p-3 sm:p-4 transition-colors last:border-b-0 hover:bg-[#f9fafb] min-h-[56px] ${
                               lesson.completed ? "opacity-75" : ""
                             }`}
                           >
                             {/* Completion Status */}
                             <div
-                              className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${
+                              className={`flex h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0 items-center justify-center rounded-full ${
                                 lesson.completed
                                   ? "bg-[#007A3D]"
                                   : "border-2 border-[#e5e7eb]"
@@ -209,7 +209,7 @@ export default function DashboardPage() {
                             >
                               {lesson.completed ? (
                                 <svg
-                                  className="h-4 w-4 text-[#fafafa]"
+                                  className="h-3 w-3 sm:h-4 sm:w-4 text-[#fafafa]"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke="currentColor"
@@ -229,22 +229,23 @@ export default function DashboardPage() {
                             </div>
 
                             {/* Lesson Info */}
-                            <div className="flex-1">
+                            <div className="flex-1 min-w-0">
                               <h3
-                                className={`font-semibold ${
+                                className={`text-sm sm:text-base font-semibold truncate ${
                                   lesson.completed
                                     ? "text-[#6b7280] line-through"
                                     : "text-[#1a1a1a]"
                                 }`}
                               >
-                                Lesson {lesson.id}: {lesson.title}
+                                <span className="hidden sm:inline">Lesson {lesson.id}: </span>
+                                {lesson.title}
                               </h3>
                             </div>
 
                             {/* Duration */}
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
                               <svg
-                                className="h-4 w-4 text-[#6b7280]"
+                                className="h-3 w-3 sm:h-4 sm:w-4 text-[#6b7280] hidden sm:block"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -256,15 +257,15 @@ export default function DashboardPage() {
                                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                               </svg>
-                              <span className="text-sm text-[#6b7280]">
+                              <span className="text-xs sm:text-sm text-[#6b7280]">
                                 {lesson.duration}
                               </span>
                             </div>
 
                             {/* Play Icon */}
-                            <div className="flex h-8 w-8 items-center justify-center text-[#CE1126]">
+                            <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center text-[#CE1126] flex-shrink-0">
                               <svg
-                                className="h-5 w-5"
+                                className="h-4 w-4 sm:h-5 sm:w-5"
                                 fill="currentColor"
                                 viewBox="0 0 24 24"
                               >
@@ -281,45 +282,45 @@ export default function DashboardPage() {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {/* Quick Stats */}
-              <div className="border border-[#e5e7eb] bg-[#ffffff] p-6">
-                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#6b7280]">
+              <div className="border border-[#e5e7eb] bg-[#ffffff] p-4 sm:p-6">
+                <h3 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#6b7280]">
                   Quick Stats
                 </h3>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#6b7280]">Lessons Completed</span>
-                    <span className="font-bold text-[#1a1a1a]">
+                    <span className="text-xs sm:text-sm text-[#6b7280]">Lessons Completed</span>
+                    <span className="text-sm sm:text-base font-bold text-[#1a1a1a]">
                       {completedLessons}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#6b7280]">Lessons Remaining</span>
-                    <span className="font-bold text-[#1a1a1a]">
+                    <span className="text-xs sm:text-sm text-[#6b7280]">Lessons Remaining</span>
+                    <span className="text-sm sm:text-base font-bold text-[#1a1a1a]">
                       {totalLessons - completedLessons}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#6b7280]">Total Duration</span>
-                    <span className="font-bold text-[#1a1a1a]">3h 45min</span>
+                    <span className="text-xs sm:text-sm text-[#6b7280]">Total Duration</span>
+                    <span className="text-sm sm:text-base font-bold text-[#1a1a1a]">3h 45min</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#6b7280]">Current Streak</span>
-                    <span className="font-bold text-[#CE1126]">5 days</span>
+                    <span className="text-xs sm:text-sm text-[#6b7280]">Current Streak</span>
+                    <span className="text-sm sm:text-base font-bold text-[#CE1126]">5 days</span>
                   </div>
                 </div>
               </div>
 
               {/* Certificate Status */}
-              <div className="border border-[#e5e7eb] bg-[#ffffff] p-6">
-                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#6b7280]">
+              <div className="border border-[#e5e7eb] bg-[#ffffff] p-4 sm:p-6">
+                <h3 className="mb-3 sm:mb-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#6b7280]">
                   Certificate
                 </h3>
                 <div className="flex flex-col items-center text-center">
-                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-[#e5e7eb]">
+                  <div className="mb-3 sm:mb-4 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full border-2 border-dashed border-[#e5e7eb]">
                     <svg
-                      className="h-10 w-10 text-[#e5e7eb]"
+                      className="h-8 w-8 sm:h-10 sm:w-10 text-[#e5e7eb]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -332,14 +333,14 @@ export default function DashboardPage() {
                       />
                     </svg>
                   </div>
-                  <p className="mb-1 font-semibold text-[#1a1a1a]">
+                  <p className="mb-1 text-sm sm:text-base font-semibold text-[#1a1a1a]">
                     Certificate Locked
                   </p>
-                  <p className="text-sm text-[#6b7280]">
+                  <p className="text-xs sm:text-sm text-[#6b7280]">
                     Complete all 15 lessons to unlock your Dabka Academy
                     certificate
                   </p>
-                  <div className="mt-4 w-full">
+                  <div className="mt-3 sm:mt-4 w-full">
                     <div className="mb-1 flex justify-between text-xs">
                       <span className="text-[#6b7280]">Progress</span>
                       <span className="text-[#1a1a1a]">{progressPercentage}%</span>
@@ -356,21 +357,21 @@ export default function DashboardPage() {
 
               {/* Next Lesson Card */}
               {nextLesson && (
-                <div className="border-2 border-[#CE1126] bg-[#ffffff] p-6">
-                  <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-[#CE1126]">
+                <div className="border-2 border-[#CE1126] bg-[#ffffff] p-4 sm:p-6">
+                  <h3 className="mb-2 sm:mb-3 text-xs sm:text-sm font-bold uppercase tracking-widest text-[#CE1126]">
                     Up Next
                   </h3>
-                  <p className="mb-2 font-bold text-[#1a1a1a]">
+                  <p className="mb-1 sm:mb-2 text-sm sm:text-base font-bold text-[#1a1a1a]">
                     Lesson {nextLesson.id}: {nextLesson.title}
                   </p>
-                  <p className="mb-4 text-sm text-[#6b7280]">
+                  <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-[#6b7280]">
                     {nextLesson.duration}
                   </p>
                   <Link
                     href={`/lesson/${nextLesson.id}`}
-                    className="inline-flex w-full items-center justify-center gap-2 bg-[#CE1126] px-4 py-3 font-bold uppercase tracking-wide text-[#fafafa] transition-colors hover:bg-[#a80d1e]"
+                    className="inline-flex w-full items-center justify-center gap-2 bg-[#CE1126] px-4 py-3 text-sm sm:text-base font-bold uppercase tracking-wide text-[#fafafa] transition-colors hover:bg-[#a80d1e] min-h-[48px]"
                   >
-                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                     Start Lesson

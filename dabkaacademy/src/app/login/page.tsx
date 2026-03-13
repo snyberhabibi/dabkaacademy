@@ -4,20 +4,20 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#fafafa] px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#fafafa] px-4 py-8 sm:py-12">
       {/* Login Card */}
-      <div className="w-full max-w-md bg-[#ffffff] border border-[#e5e7eb] rounded-2xl p-8 shadow-2xl">
+      <div className="w-full max-w-md bg-[#ffffff] border border-[#e5e7eb] rounded-2xl p-5 sm:p-8 shadow-2xl">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-black tracking-tight text-[#1a1a1a] uppercase">
+        <div className="text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-[#1a1a1a] uppercase">
             Dabka<span className="text-[#CE1126]">.</span>Academy
           </h1>
         </div>
 
         {/* Welcome Text */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Welcome Back</h2>
-          <p className="text-[#6b7280] text-sm">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a1a1a] mb-2">Welcome Back</h2>
+          <p className="text-[#6b7280] text-xs sm:text-sm">
             Continue your dabka journey
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function LoginPage() {
         {/* Google Sign-In Button */}
         <button
           type="button"
-          className="w-full flex items-center justify-center gap-3 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] font-semibold py-4 px-6 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+          className="w-full flex items-center justify-center gap-2 sm:gap-3 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-semibold py-4 px-4 sm:px-6 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] min-h-[52px]"
         >
           {/* Google Icon SVG */}
           <svg
@@ -55,16 +55,16 @@ export default function LoginPage() {
         </button>
 
         {/* Divider */}
-        <div className="flex items-center gap-4 my-8">
+        <div className="flex items-center gap-3 sm:gap-4 my-6 sm:my-8">
           <div className="flex-1 h-px bg-[#e5e7eb]"></div>
-          <span className="text-[#6b7280] text-sm uppercase tracking-wider font-medium">or</span>
+          <span className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wider font-medium">or</span>
           <div className="flex-1 h-px bg-[#e5e7eb]"></div>
         </div>
 
         {/* Email Input (Disabled) */}
-        <div className="space-y-4 mb-6">
+        <div className="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-[#6b7280] mb-2">
+            <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-[#6b7280] mb-2">
               Email
             </label>
             <input
@@ -72,13 +72,13 @@ export default function LoginPage() {
               id="email"
               placeholder="you@example.com"
               disabled
-              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none"
+              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
             />
           </div>
 
           {/* Password Input (Disabled) */}
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-[#6b7280] mb-2">
+            <label htmlFor="password" className="block text-xs sm:text-sm font-medium text-[#6b7280] mb-2">
               Password
             </label>
             <input
@@ -86,7 +86,7 @@ export default function LoginPage() {
               id="password"
               placeholder="••••••••"
               disabled
-              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none"
+              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
             />
           </div>
         </div>
@@ -95,13 +95,13 @@ export default function LoginPage() {
         <button
           type="button"
           disabled
-          className="w-full bg-[#CE1126] text-[#fafafa] font-semibold py-4 px-6 rounded-xl opacity-50 cursor-not-allowed"
+          className="w-full bg-[#CE1126] text-[#fafafa] text-sm sm:text-base font-semibold py-4 px-6 rounded-xl opacity-50 cursor-not-allowed min-h-[52px]"
         >
           Sign In
         </button>
 
         {/* Get Started Link */}
-        <p className="text-center mt-6 text-[#6b7280] text-sm">
+        <p className="text-center mt-5 sm:mt-6 text-[#6b7280] text-xs sm:text-sm">
           Don&apos;t have an account?{" "}
           <Link
             href="/signup"
@@ -112,10 +112,10 @@ export default function LoginPage() {
         </p>
 
         {/* Back to Home */}
-        <div className="text-center mt-6 pt-6 border-t border-[#e5e7eb]">
+        <div className="text-center mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-[#e5e7eb]">
           <Link
             href="/"
-            className="text-[#6b7280] text-sm hover:text-[#1a1a1a] transition-colors inline-flex items-center gap-2"
+            className="text-[#6b7280] text-xs sm:text-sm hover:text-[#1a1a1a] transition-colors inline-flex items-center gap-2 min-h-[44px]"
           >
             <svg
               width="16"

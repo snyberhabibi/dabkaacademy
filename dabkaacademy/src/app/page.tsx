@@ -174,15 +174,15 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     <div className="border-b border-[#e5e7eb]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex items-center justify-between text-left hover:text-[#CE1126] transition-colors"
+        className="w-full py-4 sm:py-6 flex items-center justify-between text-left hover:text-[#CE1126] transition-colors min-h-[56px]"
       >
-        <span className="text-lg font-semibold pr-4">{question}</span>
-        <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
+        <span className="text-base sm:text-lg font-semibold pr-4">{question}</span>
+        <span className={`transform transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
           <ChevronDownIcon />
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-6' : 'max-h-0'}`}>
-        <p className="text-[#6b7280]">{answer}</p>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-4 sm:pb-6' : 'max-h-0'}`}>
+        <p className="text-sm sm:text-base text-[#6b7280]">{answer}</p>
       </div>
     </div>
   );
@@ -203,98 +203,98 @@ export default function Home() {
         }} />
 
         {/* Accent Glow */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#CE1126] rounded-full blur-[150px] opacity-15" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#007A3D] rounded-full blur-[150px] opacity-10" />
+        <div className="absolute top-1/4 left-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#CE1126] rounded-full blur-[100px] sm:blur-[150px] opacity-15" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#007A3D] rounded-full blur-[100px] sm:blur-[150px] opacity-10" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffffff] border border-[#e5e7eb] rounded-full mb-8">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#ffffff] border border-[#e5e7eb] rounded-full mb-6 sm:mb-8">
             <span className="w-2 h-2 bg-[#007A3D] rounded-full animate-pulse" />
-            <span className="text-sm text-[#6b7280] uppercase tracking-wider">New Course Available</span>
+            <span className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">New Course Available</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 sm:mb-6">
             Master the Art of
             <span className="block text-[#CE1126]">Dabka</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-[#6b7280] max-w-2xl mx-auto mb-12">
+          <p className="text-base sm:text-xl md:text-2xl text-[#6b7280] max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
             Learn the iconic Palestinian traditional dance from anywhere in the world.
             From beginner to performance-ready in just 15 lessons.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16 px-2">
             <Link
               href="/checkout"
-              className="w-full sm:w-auto px-8 py-4 bg-[#CE1126] text-white font-bold uppercase tracking-wider rounded-none hover:bg-[#a30d1e] transition-colors flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-[#CE1126] text-white text-sm sm:text-base font-bold uppercase tracking-wider rounded-none hover:bg-[#a30d1e] transition-colors flex items-center justify-center gap-2 min-h-[52px]"
             >
               Start Learning - $29.99
             </Link>
-            <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-[#e5e7eb] text-[#1a1a1a] font-bold uppercase tracking-wider rounded-none hover:border-[#1a1a1a] transition-colors flex items-center justify-center gap-2">
+            <button className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-transparent border-2 border-[#e5e7eb] text-[#1a1a1a] text-sm sm:text-base font-bold uppercase tracking-wider rounded-none hover:border-[#1a1a1a] transition-colors flex items-center justify-center gap-2 min-h-[52px]">
               <PlayIcon />
               Watch Preview
             </button>
           </div>
 
           {/* Video Placeholder */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto px-2 sm:px-0">
             <div className="aspect-video bg-[#ffffff] border border-[#e5e7eb] flex items-center justify-center group cursor-pointer hover:border-[#CE1126] transition-colors">
-              <div className="w-20 h-20 bg-[#CE1126] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 sm:w-20 sm:h-20 bg-[#CE1126] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                 <PlayIcon />
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="absolute bottom-6 left-6 text-sm text-[#6b7280] uppercase tracking-wider">Preview Video</span>
+                <span className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Preview Video</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden sm:flex">
           <span className="text-xs text-[#6b7280] uppercase tracking-wider">Scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-[#6b7280] to-transparent" />
         </div>
       </section>
 
       {/* Social Proof Section */}
-      <section className="py-20 border-y border-[#e5e7eb]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-20 border-y border-[#e5e7eb]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-16">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-[#CE1126] mb-2">500+</div>
-              <div className="text-[#6b7280] uppercase tracking-wider">Students Enrolled</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-[#CE1126] mb-2">500+</div>
+              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Students Enrolled</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-black text-[#007A3D] mb-2">15</div>
-              <div className="text-[#6b7280] uppercase tracking-wider">HD Lessons</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-[#007A3D] mb-2">15</div>
+              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">HD Lessons</div>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-5xl md:text-6xl font-black text-[#1a1a1a] mb-2">
+              <div className="flex items-center justify-center gap-2 text-4xl sm:text-5xl md:text-6xl font-black text-[#1a1a1a] mb-2">
                 4.9 <StarIcon />
               </div>
-              <div className="text-[#6b7280] uppercase tracking-wider">Average Rating</div>
+              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Average Rating</div>
             </div>
           </div>
 
           {/* Testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {[
               { quote: "Finally learned to dance at my cousin's wedding without embarrassing myself. The lessons are clear and easy to follow.", author: "Ahmed K.", location: "Chicago, IL" },
               { quote: "As a diaspora Palestinian, this course helped me reconnect with my culture in a meaningful way. Highly recommend!", author: "Leila M.", location: "Toronto, CA" },
               { quote: "The instructor breaks down every move perfectly. I went from zero to leading the dabka line in two months.", author: "Omar S.", location: "London, UK" }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-[#ffffff] border border-[#e5e7eb] p-6 hover:border-[#CE1126] transition-colors">
-                <div className="flex gap-1 mb-4">
+              <div key={index} className="bg-[#ffffff] border border-[#e5e7eb] p-4 sm:p-6 hover:border-[#CE1126] transition-colors">
+                <div className="flex gap-1 mb-3 sm:mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#CE1126]"><StarIcon /></span>
                   ))}
                 </div>
-                <p className="text-[#1a1a1a] mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="text-sm">
+                <p className="text-sm sm:text-base text-[#1a1a1a] mb-3 sm:mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
+                <div className="text-xs sm:text-sm">
                   <span className="text-[#1a1a1a] font-semibold">{testimonial.author}</span>
                   <span className="text-[#6b7280]"> - {testimonial.location}</span>
                 </div>
@@ -305,28 +305,28 @@ export default function Home() {
       </section>
 
       {/* What You'll Learn Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <section className="py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
               What You&apos;ll Learn
             </h2>
-            <p className="text-xl text-[#6b7280] max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
               A comprehensive curriculum designed to take you from complete beginner to confident performer.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#ffffff] border border-[#e5e7eb] p-8 hover:border-[#CE1126] transition-all group"
+                className="bg-[#ffffff] border border-[#e5e7eb] p-5 sm:p-8 hover:border-[#CE1126] transition-all group"
               >
-                <div className="text-[#CE1126] mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-[#CE1126] mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold uppercase mb-2">{feature.title}</h3>
-                <p className="text-[#6b7280]">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold uppercase mb-2">{feature.title}</h3>
+                <p className="text-sm sm:text-base text-[#6b7280]">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -334,34 +334,34 @@ export default function Home() {
       </section>
 
       {/* Course Preview Section */}
-      <section className="py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <section className="py-16 sm:py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
               Course Curriculum
             </h2>
-            <p className="text-xl text-[#6b7280] max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
               Three chapters, fifteen lessons, unlimited replays. Your journey to mastering dabka starts here.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {chapters.map((chapter) => (
               <div
                 key={chapter.number}
                 className="bg-[#fafafa] border border-[#e5e7eb] overflow-hidden hover:border-[#007A3D] transition-colors"
               >
-                <div className="p-6 border-b border-[#e5e7eb]">
+                <div className="p-4 sm:p-6 border-b border-[#e5e7eb]">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-[#6b7280] uppercase tracking-wider">Chapter {chapter.number}</span>
-                    <span className="text-sm text-[#007A3D]">{chapter.lessons} Lessons</span>
+                    <span className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Chapter {chapter.number}</span>
+                    <span className="text-xs sm:text-sm text-[#007A3D]">{chapter.lessons} Lessons</span>
                   </div>
-                  <h3 className="text-2xl font-bold uppercase">{chapter.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold uppercase">{chapter.title}</h3>
                 </div>
-                <ul className="p-6 space-y-3">
+                <ul className="p-4 sm:p-6 space-y-2 sm:space-y-3">
                   {chapter.topics.map((topic, index) => (
-                    <li key={index} className="flex items-center gap-3 text-[#6b7280]">
-                      <span className="text-[#007A3D]"><CheckIcon /></span>
+                    <li key={index} className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6b7280]">
+                      <span className="text-[#007A3D] flex-shrink-0"><CheckIcon /></span>
                       {topic}
                     </li>
                   ))}
@@ -373,27 +373,27 @@ export default function Home() {
       </section>
 
       {/* Instructor Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Instructor Image Placeholder */}
-            <div className="relative">
+            <div className="relative mx-4 sm:mx-0">
               <div className="aspect-square bg-[#ffffff] border border-[#e5e7eb]">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-[#6b7280] uppercase tracking-wider">Instructor Photo</span>
+                  <span className="text-sm sm:text-base text-[#6b7280] uppercase tracking-wider">Instructor Photo</span>
                 </div>
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#CE1126] -z-10" />
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-full h-full border-2 border-[#CE1126] -z-10" />
             </div>
 
             {/* Instructor Info */}
-            <div>
-              <span className="text-sm text-[#CE1126] uppercase tracking-wider mb-4 block">Meet Your Instructor</span>
-              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">
+            <div className="mt-6 lg:mt-0">
+              <span className="text-xs sm:text-sm text-[#CE1126] uppercase tracking-wider mb-3 sm:mb-4 block">Meet Your Instructor</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-4 sm:mb-6">
                 Khalil Nassar
               </h2>
-              <div className="space-y-4 text-[#6b7280] text-lg">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-lg text-[#6b7280]">
                 <p>
                   With over 15 years of experience performing and teaching dabka, Khalil has dedicated his life to preserving and sharing Palestinian cultural traditions.
                 </p>
@@ -404,18 +404,18 @@ export default function Home() {
                   His teaching style combines traditional techniques with modern pedagogy, making the art of dabka accessible to everyone regardless of their background or experience level.
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-6">
-                <div>
-                  <div className="text-3xl font-black text-[#CE1126]">15+</div>
-                  <div className="text-sm text-[#6b7280] uppercase">Years Teaching</div>
+              <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-4 sm:gap-6">
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl sm:text-3xl font-black text-[#CE1126]">15+</div>
+                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Years Teaching</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-black text-[#007A3D]">1000+</div>
-                  <div className="text-sm text-[#6b7280] uppercase">Students Taught</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl sm:text-3xl font-black text-[#007A3D]">1000+</div>
+                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Students Taught</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-black text-[#1a1a1a]">50+</div>
-                  <div className="text-sm text-[#6b7280] uppercase">Events Performed</div>
+                <div className="text-center sm:text-left">
+                  <div className="text-2xl sm:text-3xl font-black text-[#1a1a1a]">50+</div>
+                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Events Performed</div>
                 </div>
               </div>
             </div>
@@ -424,36 +424,36 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <section className="py-16 sm:py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
               Get Started Today
             </h2>
-            <p className="text-xl text-[#6b7280] max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
               One-time payment, lifetime access. No subscriptions, no hidden fees.
             </p>
           </div>
 
-          <div className="max-w-lg mx-auto">
-            <div className="bg-[#fafafa] border-2 border-[#CE1126] p-8 relative">
+          <div className="max-w-lg mx-auto px-2 sm:px-0">
+            <div className="bg-[#fafafa] border-2 border-[#CE1126] p-5 sm:p-8 relative">
               {/* Popular Badge */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CE1126] px-4 py-1">
-                <span className="text-sm font-bold uppercase tracking-wider text-white">Best Value</span>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CE1126] px-3 sm:px-4 py-1">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white whitespace-nowrap">Best Value</span>
               </div>
 
-              <div className="text-center mb-8">
-                <div className="text-sm text-[#6b7280] uppercase tracking-wider mb-2">Complete Course</div>
+              <div className="text-center mb-6 sm:mb-8 pt-2">
+                <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider mb-2">Complete Course</div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-5xl md:text-6xl font-black">$29.99</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-black">$29.99</span>
                 </div>
-                <div className="text-[#6b7280] mt-2">One-time payment</div>
+                <div className="text-sm sm:text-base text-[#6b7280] mt-2">One-time payment</div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {pricingIncludes.map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <span className="text-[#007A3D]"><CheckIcon /></span>
+                  <li key={index} className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                    <span className="text-[#007A3D] flex-shrink-0"><CheckIcon /></span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -461,12 +461,12 @@ export default function Home() {
 
               <Link
                 href="/checkout"
-                className="block w-full py-4 bg-[#CE1126] text-white font-bold uppercase tracking-wider text-center hover:bg-[#a30d1e] transition-colors"
+                className="block w-full py-4 bg-[#CE1126] text-white text-sm sm:text-base font-bold uppercase tracking-wider text-center hover:bg-[#a30d1e] transition-colors min-h-[52px] flex items-center justify-center"
               >
                 Enroll Now
               </Link>
 
-              <p className="text-center text-sm text-[#6b7280] mt-4">
+              <p className="text-center text-xs sm:text-sm text-[#6b7280] mt-4">
                 30-day money-back guarantee. Risk-free.
               </p>
             </div>
@@ -475,25 +475,25 @@ export default function Home() {
       </section>
 
       {/* Pop-Up Classes Teaser */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-[#CE1126]/10 to-[#007A3D]/10 border border-[#e5e7eb] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-6">
-              <div className="text-[#CE1126]">
+      <section className="py-12 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-gradient-to-r from-[#CE1126]/10 to-[#007A3D]/10 border border-[#e5e7eb] p-5 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-8">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
+              <div className="text-[#CE1126] flex-shrink-0">
                 <MapPinIcon />
               </div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-black uppercase mb-2">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase mb-2">
                   In-Person Pop-Up Classes
                 </h3>
-                <p className="text-[#6b7280] text-lg">
+                <p className="text-sm sm:text-lg text-[#6b7280]">
                   Join us for live workshops in cities across the nation. Experience dabka with a community.
                 </p>
               </div>
             </div>
             <Link
               href="/classes"
-              className="shrink-0 px-8 py-4 bg-transparent border-2 border-[#1a1a1a] text-[#1a1a1a] font-bold uppercase tracking-wider hover:bg-[#1a1a1a] hover:text-[#fafafa] transition-colors"
+              className="w-full sm:w-auto shrink-0 px-6 sm:px-8 py-4 bg-transparent border-2 border-[#1a1a1a] text-[#1a1a1a] text-sm sm:text-base font-bold uppercase tracking-wider hover:bg-[#1a1a1a] hover:text-[#fafafa] transition-colors text-center min-h-[52px] flex items-center justify-center"
             >
               View Schedule
             </Link>
@@ -502,13 +502,13 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-[#ffffff] border-t border-[#e5e7eb]">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+      <section className="py-16 sm:py-24 bg-[#ffffff] border-t border-[#e5e7eb]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-[#6b7280]">
+            <p className="text-base sm:text-xl text-[#6b7280]">
               Got questions? We&apos;ve got answers.
             </p>
           </div>
@@ -519,11 +519,11 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-[#6b7280] mb-4">Still have questions?</p>
+          <div className="text-center mt-8 sm:mt-12">
+            <p className="text-sm sm:text-base text-[#6b7280] mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-[#CE1126] font-bold uppercase tracking-wider hover:underline"
+              className="text-[#CE1126] text-sm sm:text-base font-bold uppercase tracking-wider hover:underline min-h-[44px] inline-flex items-center"
             >
               Contact Us
             </Link>
@@ -532,18 +532,18 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 border-t border-[#e5e7eb]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-6">
+      <section className="py-16 sm:py-24 border-t border-[#e5e7eb]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 sm:mb-6">
             Ready to Start Your
             <span className="block text-[#CE1126]">Dabka Journey?</span>
           </h2>
-          <p className="text-xl text-[#6b7280] mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-[#6b7280] mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
             Join hundreds of students who have already mastered the art of Palestinian traditional dance.
           </p>
           <Link
             href="/checkout"
-            className="inline-block px-12 py-5 bg-[#CE1126] text-white text-xl font-bold uppercase tracking-wider hover:bg-[#a30d1e] transition-colors"
+            className="inline-block w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-[#CE1126] text-white text-base sm:text-xl font-bold uppercase tracking-wider hover:bg-[#a30d1e] transition-colors min-h-[52px]"
           >
             Enroll Now - $29.99
           </Link>

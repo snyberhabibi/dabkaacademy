@@ -77,33 +77,33 @@ export default function CertificatePage() {
     <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
-      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
 
           {/* Celebration Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#007A3D]/10 border border-[#007A3D]/30 rounded-full mb-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#007A3D]/10 border border-[#007A3D]/30 rounded-full mb-4 sm:mb-6">
               <CheckIcon />
-              <span className="text-[#007A3D] text-sm font-medium uppercase tracking-wide">
+              <span className="text-[#007A3D] text-xs sm:text-sm font-medium uppercase tracking-wide">
                 Course Completed
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black text-[#1a1a1a] uppercase tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#1a1a1a] uppercase tracking-tight mb-3 sm:mb-4">
               Congratulations!
             </h1>
-            <p className="text-[#6b7280] text-lg max-w-2xl mx-auto">
+            <p className="text-sm sm:text-lg text-[#6b7280] max-w-2xl mx-auto px-2">
               You&apos;ve mastered the art of Palestinian dabka! Your dedication to preserving
               this beautiful cultural tradition is truly inspiring.
             </p>
           </div>
 
           {/* Certificate Display */}
-          <div className="relative mb-12">
+          <div className="relative mb-8 sm:mb-12">
             {/* Outer glow effect */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#CE1126]/10 to-[#007A3D]/10 rounded-2xl blur-3xl" />
 
             {/* Certificate Card */}
-            <div className="relative bg-gradient-to-br from-[#f5f5f5] to-[#ffffff] rounded-2xl border border-[#e5e7eb] p-2 sm:p-3 shadow-xl">
+            <div className="relative bg-gradient-to-br from-[#f5f5f5] to-[#ffffff] rounded-xl sm:rounded-2xl border border-[#e5e7eb] p-1.5 sm:p-2 md:p-3 shadow-xl">
               {/* Certificate Inner - Premium Design */}
               <div
                 id="certificate"
@@ -212,36 +212,36 @@ export default function CertificatePage() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16">
             {/* Download Button */}
             <button
               onClick={handleDownload}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-[#CE1126] hover:bg-[#a80d1e] text-white font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 bg-[#CE1126] hover:bg-[#a80d1e] text-white text-sm sm:text-base font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105 min-h-[52px]"
             >
               <DownloadIcon />
               Download Certificate
             </button>
 
             {/* Share Buttons */}
-            <div className="flex items-center gap-3">
-              <span className="text-[#6b7280] text-sm hidden sm:inline">Share:</span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-[#6b7280] text-xs sm:text-sm hidden sm:inline">Share:</span>
               <button
                 onClick={() => handleShare("instagram")}
-                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on Instagram"
               >
                 <InstagramIcon />
               </button>
               <button
                 onClick={() => handleShare("twitter")}
-                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on Twitter"
               >
                 <TwitterIcon />
               </button>
               <button
                 onClick={() => handleShare("linkedin")}
-                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on LinkedIn"
               >
                 <LinkedInIcon />
@@ -250,44 +250,44 @@ export default function CertificatePage() {
           </div>
 
           {/* Stats Summary */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
-              <p className="text-4xl font-black text-[#007A3D] mb-2">15</p>
-              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Lessons Completed</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10 sm:mb-16">
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+              <p className="text-3xl sm:text-4xl font-black text-[#007A3D] mb-1 sm:mb-2">15</p>
+              <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Lessons Completed</p>
             </div>
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
-              <p className="text-4xl font-black text-[#CE1126] mb-2">{totalWatchTime}</p>
-              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Hours Watch Time</p>
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+              <p className="text-3xl sm:text-4xl font-black text-[#CE1126] mb-1 sm:mb-2">{totalWatchTime}</p>
+              <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Hours Watch Time</p>
             </div>
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
-              <p className="text-lg font-bold text-[#1a1a1a] mb-2">{completionDate}</p>
-              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Completed On</p>
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+              <p className="text-base sm:text-lg font-bold text-[#1a1a1a] mb-1 sm:mb-2">{completionDate}</p>
+              <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Completed On</p>
             </div>
           </div>
 
           {/* Pop-up Classes CTA */}
-          <div className="bg-gradient-to-r from-[#CE1126]/5 via-[#ffffff] to-[#007A3D]/5 border border-[#e5e7eb] rounded-2xl p-8 sm:p-12 text-center">
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1a1a1a] uppercase tracking-tight mb-4">
+          <div className="bg-gradient-to-r from-[#CE1126]/5 via-[#ffffff] to-[#007A3D]/5 border border-[#e5e7eb] rounded-2xl p-5 sm:p-8 md:p-12 text-center">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#1a1a1a] uppercase tracking-tight mb-3 sm:mb-4">
               Keep the Momentum Going
             </h3>
-            <p className="text-[#6b7280] text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-sm sm:text-lg text-[#6b7280] max-w-2xl mx-auto mb-6 sm:mb-8">
               Now that you&apos;ve completed the online course, join our pop-up classes to practice
               in person with other dancers! Experience the energy of dancing dabka together
               and connect with your community.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/pop-up-classes"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105 min-h-[52px]"
               >
                 Find Pop-Up Classes
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
               <Link
                 href="/dashboard"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-[#e5e7eb] hover:border-[#1a1a1a]/30 text-[#1a1a1a] font-medium uppercase tracking-wide rounded-lg transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-4 border border-[#e5e7eb] hover:border-[#1a1a1a]/30 text-[#1a1a1a] text-sm sm:text-base font-medium uppercase tracking-wide rounded-lg transition-colors min-h-[52px]"
               >
                 Back to Dashboard
               </Link>
