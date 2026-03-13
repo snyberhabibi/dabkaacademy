@@ -232,7 +232,7 @@ export default function AboutPage() {
             <div className="lg:col-span-3 space-y-5 sm:space-y-8 mt-6 sm:mt-0">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-black text-[#1a1a1a] uppercase mb-2">
-                  [Instructor Name]
+                  Yusuf Abdel-Rahman
                 </h3>
                 <p className="text-[#CE1126] font-medium uppercase tracking-wide text-xs sm:text-sm">
                   Founder & Lead Instructor

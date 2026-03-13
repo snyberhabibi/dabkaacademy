@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/course", label: "Course" },
-  { href: "/pop-up-classes", label: "Pop-Up Classes" },
+  { href: "/checkout", label: "Course" },
+  { href: "/classes", label: "Pop-Up Classes" },
   { href: "/about", label: "About" },
 ];
 
@@ -52,7 +52,7 @@ export default function Navbar() {
               Login
             </Link>
             <Link
-              href="/get-started"
+              href="/checkout"
               className="px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-[#fafafa] bg-[#CE1126] hover:bg-[#CE1126]/90 transition-all duration-200 hover:shadow-[0_0_30px_rgba(206,17,38,0.4)] hover:translate-y-[-2px]"
             >
               Get Started
@@ -118,7 +118,7 @@ export default function Navbar() {
               Login
             </Link>
             <Link
-              href="/get-started"
+              href="/checkout"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full px-4 py-3 text-center text-base font-bold uppercase tracking-wider text-[#fafafa] bg-[#CE1126] hover:bg-[#CE1126]/90 transition-all duration-200"
             >
