@@ -190,11 +190,11 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#fafafa] text-[#1a1a1a]">
+    <div className="min-h-screen bg-[#fafafa] text-[#1a1a1a] overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#fafafa] via-[#ffffff] to-[#fafafa]" />
         <div className="absolute inset-0 opacity-30" style={{
@@ -214,7 +214,7 @@ export default function Home() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 sm:mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 sm:mb-6 px-2">
             Master the Art of
             <span className="block text-[#CE1126]">Dabka</span>
           </h1>
