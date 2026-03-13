@@ -81,7 +81,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -90,17 +90,17 @@ export default function DashboardPage() {
           <div className="mb-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="mb-1 text-sm font-medium uppercase tracking-widest text-[#e63946]">
+                <p className="mb-1 text-sm font-medium uppercase tracking-widest text-[#CE1126]">
                   Welcome back
                 </p>
-                <h1 className="text-3xl font-black uppercase tracking-tight text-[#fafafa] sm:text-4xl">
+                <h1 className="text-3xl font-black uppercase tracking-tight text-[#1a1a1a] sm:text-4xl">
                   Yusuf
                 </h1>
               </div>
 
               <Link
                 href={nextLesson ? `/lesson/${nextLesson.id}` : "#"}
-                className="group inline-flex items-center gap-3 rounded-none bg-[#e63946] px-6 py-4 font-bold uppercase tracking-wide text-[#fafafa] transition-all hover:bg-[#c62f3b] hover:gap-4"
+                className="group inline-flex items-center gap-3 rounded-none bg-[#CE1126] px-6 py-4 font-bold uppercase tracking-wide text-[#fafafa] transition-all hover:bg-[#a80d1e] hover:gap-4"
               >
                 <span>Continue Learning</span>
                 <svg
@@ -122,16 +122,16 @@ export default function DashboardPage() {
             {/* Progress Bar */}
             <div className="mt-8">
               <div className="mb-2 flex items-center justify-between">
-                <span className="text-sm font-medium text-[#71717a]">
+                <span className="text-sm font-medium text-[#6b7280]">
                   Overall Progress
                 </span>
-                <span className="text-sm font-bold text-[#fafafa]">
+                <span className="text-sm font-bold text-[#1a1a1a]">
                   {completedLessons}/{totalLessons} lessons ({progressPercentage}%)
                 </span>
               </div>
-              <div className="h-3 w-full overflow-hidden bg-[#27272a]">
+              <div className="h-3 w-full overflow-hidden bg-[#e5e7eb]">
                 <div
-                  className="h-full bg-gradient-to-r from-[#e63946] to-[#ff6b6b] transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-[#CE1126] to-[#ff4d5a] transition-all duration-500"
                   style={{ width: `${progressPercentage}%` }}
                 />
               </div>
@@ -150,29 +150,29 @@ export default function DashboardPage() {
                 return (
                   <div
                     key={chapter.id}
-                    className="border border-[#27272a] bg-[#141414]"
+                    className="border border-[#e5e7eb] bg-[#ffffff]"
                   >
                     {/* Chapter Header */}
                     <button
                       onClick={() => toggleChapter(chapter.id)}
-                      className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-[#1a1a1a]"
+                      className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-[#f9fafb]"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="flex h-10 w-10 items-center justify-center border border-[#27272a] bg-[#0a0a0a] font-black text-[#fafafa]">
+                        <div className="flex h-10 w-10 items-center justify-center border border-[#e5e7eb] bg-[#fafafa] font-black text-[#1a1a1a]">
                           {chapter.id}
                         </div>
                         <div>
-                          <h2 className="text-lg font-bold uppercase tracking-wide text-[#fafafa]">
+                          <h2 className="text-lg font-bold uppercase tracking-wide text-[#1a1a1a]">
                             Chapter {chapter.id}: {chapter.title}
                           </h2>
-                          <p className="text-sm text-[#71717a]">
+                          <p className="text-sm text-[#6b7280]">
                             {chapterCompleted}/{chapter.lessons.length} lessons
                             completed
                           </p>
                         </div>
                       </div>
                       <svg
-                        className={`h-6 w-6 text-[#71717a] transition-transform ${
+                        className={`h-6 w-6 text-[#6b7280] transition-transform ${
                           isExpanded ? "rotate-180" : ""
                         }`}
                         fill="none"
@@ -190,12 +190,12 @@ export default function DashboardPage() {
 
                     {/* Lessons List */}
                     {isExpanded && (
-                      <div className="border-t border-[#27272a]">
+                      <div className="border-t border-[#e5e7eb]">
                         {chapter.lessons.map((lesson, index) => (
                           <Link
                             key={lesson.id}
                             href={`/lesson/${lesson.id}`}
-                            className={`flex items-center gap-4 border-b border-[#27272a] p-4 transition-colors last:border-b-0 hover:bg-[#1a1a1a] ${
+                            className={`flex items-center gap-4 border-b border-[#e5e7eb] p-4 transition-colors last:border-b-0 hover:bg-[#f9fafb] ${
                               lesson.completed ? "opacity-75" : ""
                             }`}
                           >
@@ -203,8 +203,8 @@ export default function DashboardPage() {
                             <div
                               className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${
                                 lesson.completed
-                                  ? "bg-[#2a9d8f]"
-                                  : "border-2 border-[#27272a]"
+                                  ? "bg-[#007A3D]"
+                                  : "border-2 border-[#e5e7eb]"
                               }`}
                             >
                               {lesson.completed ? (
@@ -222,7 +222,7 @@ export default function DashboardPage() {
                                   />
                                 </svg>
                               ) : (
-                                <span className="text-xs font-bold text-[#71717a]">
+                                <span className="text-xs font-bold text-[#6b7280]">
                                   {lesson.id}
                                 </span>
                               )}
@@ -233,8 +233,8 @@ export default function DashboardPage() {
                               <h3
                                 className={`font-semibold ${
                                   lesson.completed
-                                    ? "text-[#71717a] line-through"
-                                    : "text-[#fafafa]"
+                                    ? "text-[#6b7280] line-through"
+                                    : "text-[#1a1a1a]"
                                 }`}
                               >
                                 Lesson {lesson.id}: {lesson.title}
@@ -244,7 +244,7 @@ export default function DashboardPage() {
                             {/* Duration */}
                             <div className="flex items-center gap-2">
                               <svg
-                                className="h-4 w-4 text-[#71717a]"
+                                className="h-4 w-4 text-[#6b7280]"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -256,13 +256,13 @@ export default function DashboardPage() {
                                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                 />
                               </svg>
-                              <span className="text-sm text-[#71717a]">
+                              <span className="text-sm text-[#6b7280]">
                                 {lesson.duration}
                               </span>
                             </div>
 
                             {/* Play Icon */}
-                            <div className="flex h-8 w-8 items-center justify-center text-[#e63946]">
+                            <div className="flex h-8 w-8 items-center justify-center text-[#CE1126]">
                               <svg
                                 className="h-5 w-5"
                                 fill="currentColor"
@@ -283,43 +283,43 @@ export default function DashboardPage() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Quick Stats */}
-              <div className="border border-[#27272a] bg-[#141414] p-6">
-                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#71717a]">
+              <div className="border border-[#e5e7eb] bg-[#ffffff] p-6">
+                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#6b7280]">
                   Quick Stats
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#71717a]">Lessons Completed</span>
-                    <span className="font-bold text-[#fafafa]">
+                    <span className="text-[#6b7280]">Lessons Completed</span>
+                    <span className="font-bold text-[#1a1a1a]">
                       {completedLessons}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#71717a]">Lessons Remaining</span>
-                    <span className="font-bold text-[#fafafa]">
+                    <span className="text-[#6b7280]">Lessons Remaining</span>
+                    <span className="font-bold text-[#1a1a1a]">
                       {totalLessons - completedLessons}
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#71717a]">Total Duration</span>
-                    <span className="font-bold text-[#fafafa]">3h 45min</span>
+                    <span className="text-[#6b7280]">Total Duration</span>
+                    <span className="font-bold text-[#1a1a1a]">3h 45min</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-[#71717a]">Current Streak</span>
-                    <span className="font-bold text-[#e63946]">5 days</span>
+                    <span className="text-[#6b7280]">Current Streak</span>
+                    <span className="font-bold text-[#CE1126]">5 days</span>
                   </div>
                 </div>
               </div>
 
               {/* Certificate Status */}
-              <div className="border border-[#27272a] bg-[#141414] p-6">
-                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#71717a]">
+              <div className="border border-[#e5e7eb] bg-[#ffffff] p-6">
+                <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-[#6b7280]">
                   Certificate
                 </h3>
                 <div className="flex flex-col items-center text-center">
-                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-[#27272a]">
+                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-[#e5e7eb]">
                     <svg
-                      className="h-10 w-10 text-[#27272a]"
+                      className="h-10 w-10 text-[#e5e7eb]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -332,21 +332,21 @@ export default function DashboardPage() {
                       />
                     </svg>
                   </div>
-                  <p className="mb-1 font-semibold text-[#fafafa]">
+                  <p className="mb-1 font-semibold text-[#1a1a1a]">
                     Certificate Locked
                   </p>
-                  <p className="text-sm text-[#71717a]">
+                  <p className="text-sm text-[#6b7280]">
                     Complete all 15 lessons to unlock your Dabka Academy
                     certificate
                   </p>
                   <div className="mt-4 w-full">
                     <div className="mb-1 flex justify-between text-xs">
-                      <span className="text-[#71717a]">Progress</span>
-                      <span className="text-[#fafafa]">{progressPercentage}%</span>
+                      <span className="text-[#6b7280]">Progress</span>
+                      <span className="text-[#1a1a1a]">{progressPercentage}%</span>
                     </div>
-                    <div className="h-2 w-full overflow-hidden bg-[#27272a]">
+                    <div className="h-2 w-full overflow-hidden bg-[#e5e7eb]">
                       <div
-                        className="h-full bg-[#2a9d8f] transition-all duration-500"
+                        className="h-full bg-[#007A3D] transition-all duration-500"
                         style={{ width: `${progressPercentage}%` }}
                       />
                     </div>
@@ -356,19 +356,19 @@ export default function DashboardPage() {
 
               {/* Next Lesson Card */}
               {nextLesson && (
-                <div className="border-2 border-[#e63946] bg-[#141414] p-6">
-                  <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-[#e63946]">
+                <div className="border-2 border-[#CE1126] bg-[#ffffff] p-6">
+                  <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-[#CE1126]">
                     Up Next
                   </h3>
-                  <p className="mb-2 font-bold text-[#fafafa]">
+                  <p className="mb-2 font-bold text-[#1a1a1a]">
                     Lesson {nextLesson.id}: {nextLesson.title}
                   </p>
-                  <p className="mb-4 text-sm text-[#71717a]">
+                  <p className="mb-4 text-sm text-[#6b7280]">
                     {nextLesson.duration}
                   </p>
                   <Link
                     href={`/lesson/${nextLesson.id}`}
-                    className="inline-flex w-full items-center justify-center gap-2 bg-[#e63946] px-4 py-3 font-bold uppercase tracking-wide text-[#fafafa] transition-colors hover:bg-[#c62f3b]"
+                    className="inline-flex w-full items-center justify-center gap-2 bg-[#CE1126] px-4 py-3 font-bold uppercase tracking-wide text-[#fafafa] transition-colors hover:bg-[#a80d1e]"
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />

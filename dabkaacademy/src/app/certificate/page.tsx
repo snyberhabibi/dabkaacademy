@@ -74,7 +74,7 @@ export default function CertificatePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
 
       <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -82,16 +82,16 @@ export default function CertificatePage() {
 
           {/* Celebration Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2a9d8f]/20 border border-[#2a9d8f]/30 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#007A3D]/10 border border-[#007A3D]/30 rounded-full mb-6">
               <CheckIcon />
-              <span className="text-[#2a9d8f] text-sm font-medium uppercase tracking-wide">
+              <span className="text-[#007A3D] text-sm font-medium uppercase tracking-wide">
                 Course Completed
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-black text-[#fafafa] uppercase tracking-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl font-black text-[#1a1a1a] uppercase tracking-tight mb-4">
               Congratulations!
             </h1>
-            <p className="text-[#fafafa]/60 text-lg max-w-2xl mx-auto">
+            <p className="text-[#6b7280] text-lg max-w-2xl mx-auto">
               You&apos;ve mastered the art of Palestinian dabka! Your dedication to preserving
               this beautiful cultural tradition is truly inspiring.
             </p>
@@ -100,10 +100,10 @@ export default function CertificatePage() {
           {/* Certificate Display */}
           <div className="relative mb-12">
             {/* Outer glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#e63946]/10 to-[#2a9d8f]/10 rounded-2xl blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#CE1126]/10 to-[#007A3D]/10 rounded-2xl blur-3xl" />
 
             {/* Certificate Card */}
-            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#141414] rounded-2xl border border-[#27272a] p-2 sm:p-3">
+            <div className="relative bg-gradient-to-br from-[#f5f5f5] to-[#ffffff] rounded-2xl border border-[#e5e7eb] p-2 sm:p-3 shadow-xl">
               {/* Certificate Inner - Premium Design */}
               <div
                 id="certificate"
@@ -111,33 +111,33 @@ export default function CertificatePage() {
                 style={{ aspectRatio: "1.414/1" }}
               >
                 {/* Decorative border */}
-                <div className="absolute inset-4 sm:inset-6 border-2 border-[#0a0a0a]/20 rounded-lg" />
-                <div className="absolute inset-6 sm:inset-8 border border-[#0a0a0a]/10 rounded" />
+                <div className="absolute inset-4 sm:inset-6 border-2 border-[#1a1a1a]/20 rounded-lg" />
+                <div className="absolute inset-6 sm:inset-8 border border-[#1a1a1a]/10 rounded" />
 
                 {/* Corner decorations - Palestinian embroidery inspired */}
                 <div className="absolute top-6 left-6 sm:top-8 sm:left-8 w-12 h-12 sm:w-16 sm:h-16">
-                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#e63946]">
+                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#CE1126]">
                     <path d="M0 0L16 16L0 32" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <path d="M0 0L32 0L16 16" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="8" cy="8" r="3" fill="currentColor"/>
                   </svg>
                 </div>
                 <div className="absolute top-6 right-6 sm:top-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 rotate-90">
-                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#e63946]">
+                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#CE1126]">
                     <path d="M0 0L16 16L0 32" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <path d="M0 0L32 0L16 16" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="8" cy="8" r="3" fill="currentColor"/>
                   </svg>
                 </div>
                 <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 w-12 h-12 sm:w-16 sm:h-16 -rotate-90">
-                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#e63946]">
+                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#CE1126]">
                     <path d="M0 0L16 16L0 32" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <path d="M0 0L32 0L16 16" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="8" cy="8" r="3" fill="currentColor"/>
                   </svg>
                 </div>
                 <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-16 sm:h-16 rotate-180">
-                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#e63946]">
+                  <svg viewBox="0 0 64 64" className="w-full h-full text-[#CE1126]">
                     <path d="M0 0L16 16L0 32" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <path d="M0 0L32 0L16 16" fill="none" stroke="currentColor" strokeWidth="2"/>
                     <circle cx="8" cy="8" r="3" fill="currentColor"/>
@@ -147,63 +147,63 @@ export default function CertificatePage() {
                 {/* Certificate Content */}
                 <div className="relative h-full flex flex-col items-center justify-center px-8 sm:px-16 py-8 sm:py-12 text-center">
                   {/* Top decorative pattern */}
-                  <DecorativePattern className="w-48 sm:w-64 h-5 text-[#e63946] mb-4 sm:mb-6" />
+                  <DecorativePattern className="w-48 sm:w-64 h-5 text-[#CE1126] mb-4 sm:mb-6" />
 
                   {/* Header */}
-                  <h2 className="text-2xl sm:text-4xl font-black text-[#0a0a0a] tracking-[0.2em] uppercase mb-2">
+                  <h2 className="text-2xl sm:text-4xl font-black text-[#1a1a1a] tracking-[0.2em] uppercase mb-2">
                     DABKA ACADEMY
                   </h2>
 
                   {/* Subtitle line */}
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-8">
-                    <div className="w-8 sm:w-16 h-px bg-[#0a0a0a]/30" />
-                    <span className="text-[#e63946] text-xs sm:text-sm font-medium tracking-[0.3em] uppercase">Est. 2024</span>
-                    <div className="w-8 sm:w-16 h-px bg-[#0a0a0a]/30" />
+                    <div className="w-8 sm:w-16 h-px bg-[#1a1a1a]/30" />
+                    <span className="text-[#CE1126] text-xs sm:text-sm font-medium tracking-[0.3em] uppercase">Est. 2024</span>
+                    <div className="w-8 sm:w-16 h-px bg-[#1a1a1a]/30" />
                   </div>
 
                   {/* Certificate Title */}
-                  <h3 className="text-lg sm:text-2xl font-light text-[#0a0a0a]/80 tracking-wide mb-4 sm:mb-8">
+                  <h3 className="text-lg sm:text-2xl font-light text-[#1a1a1a]/80 tracking-wide mb-4 sm:mb-8">
                     Certificate of Completion
                   </h3>
 
                   {/* Presented to */}
-                  <p className="text-xs sm:text-sm text-[#0a0a0a]/60 uppercase tracking-widest mb-2">
+                  <p className="text-xs sm:text-sm text-[#1a1a1a]/60 uppercase tracking-widest mb-2">
                     This certifies that
                   </p>
 
                   {/* Student Name */}
                   <div className="mb-4 sm:mb-6">
-                    <p className="text-2xl sm:text-4xl font-bold text-[#0a0a0a] border-b-2 border-[#e63946] pb-2 px-4 sm:px-8">
+                    <p className="text-2xl sm:text-4xl font-bold text-[#1a1a1a] border-b-2 border-[#CE1126] pb-2 px-4 sm:px-8">
                       {studentName}
                     </p>
                   </div>
 
                   {/* Course completion text */}
-                  <p className="text-sm sm:text-lg text-[#0a0a0a]/80 max-w-md mb-4 sm:mb-8">
+                  <p className="text-sm sm:text-lg text-[#1a1a1a]/80 max-w-md mb-4 sm:mb-8">
                     Has successfully completed the<br />
-                    <span className="font-semibold text-[#0a0a0a]">Palestinian Dabka Course</span>
+                    <span className="font-semibold text-[#1a1a1a]">Palestinian Dabka Course</span>
                   </p>
 
                   {/* Date and signature area */}
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-16 mt-2 sm:mt-4">
                     <div className="text-center">
-                      <p className="text-xs text-[#0a0a0a]/50 uppercase tracking-wider mb-1">Date of Completion</p>
-                      <p className="text-sm sm:text-base font-medium text-[#0a0a0a]">{completionDate}</p>
+                      <p className="text-xs text-[#1a1a1a]/50 uppercase tracking-wider mb-1">Date of Completion</p>
+                      <p className="text-sm sm:text-base font-medium text-[#1a1a1a]">{completionDate}</p>
                     </div>
-                    <div className="hidden sm:block w-px h-12 bg-[#0a0a0a]/20" />
+                    <div className="hidden sm:block w-px h-12 bg-[#1a1a1a]/20" />
                     <div className="text-center">
-                      <p className="text-xs text-[#0a0a0a]/50 uppercase tracking-wider mb-1">Certificate ID</p>
-                      <p className="text-sm sm:text-base font-mono text-[#0a0a0a]/70">{certificateId}</p>
+                      <p className="text-xs text-[#1a1a1a]/50 uppercase tracking-wider mb-1">Certificate ID</p>
+                      <p className="text-sm sm:text-base font-mono text-[#1a1a1a]/70">{certificateId}</p>
                     </div>
                   </div>
 
                   {/* Bottom decorative pattern */}
-                  <DecorativePattern className="w-48 sm:w-64 h-5 text-[#2a9d8f] mt-4 sm:mt-6 rotate-180" />
+                  <DecorativePattern className="w-48 sm:w-64 h-5 text-[#007A3D] mt-4 sm:mt-6 rotate-180" />
                 </div>
 
                 {/* Watermark */}
                 <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 opacity-10">
-                  <div className="w-16 h-16 sm:w-24 sm:h-24 bg-[#e63946] rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 sm:w-24 sm:h-24 bg-[#CE1126] rounded-full flex items-center justify-center">
                     <span className="text-white font-black text-lg sm:text-2xl">DA</span>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function CertificatePage() {
             {/* Download Button */}
             <button
               onClick={handleDownload}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-[#e63946] hover:bg-[#e63946]/90 text-white font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
+              className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-[#CE1126] hover:bg-[#a80d1e] text-white font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
             >
               <DownloadIcon />
               Download Certificate
@@ -224,24 +224,24 @@ export default function CertificatePage() {
 
             {/* Share Buttons */}
             <div className="flex items-center gap-3">
-              <span className="text-[#fafafa]/40 text-sm hidden sm:inline">Share:</span>
+              <span className="text-[#6b7280] text-sm hidden sm:inline">Share:</span>
               <button
                 onClick={() => handleShare("instagram")}
-                className="w-12 h-12 flex items-center justify-center bg-[#141414] hover:bg-[#27272a] border border-[#27272a] text-[#fafafa] rounded-lg transition-colors"
+                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on Instagram"
               >
                 <InstagramIcon />
               </button>
               <button
                 onClick={() => handleShare("twitter")}
-                className="w-12 h-12 flex items-center justify-center bg-[#141414] hover:bg-[#27272a] border border-[#27272a] text-[#fafafa] rounded-lg transition-colors"
+                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on Twitter"
               >
                 <TwitterIcon />
               </button>
               <button
                 onClick={() => handleShare("linkedin")}
-                className="w-12 h-12 flex items-center justify-center bg-[#141414] hover:bg-[#27272a] border border-[#27272a] text-[#fafafa] rounded-lg transition-colors"
+                className="w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
                 aria-label="Share on LinkedIn"
               >
                 <LinkedInIcon />
@@ -251,26 +251,26 @@ export default function CertificatePage() {
 
           {/* Stats Summary */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
-            <div className="bg-[#141414] border border-[#27272a] rounded-xl p-6 text-center">
-              <p className="text-4xl font-black text-[#2a9d8f] mb-2">15</p>
-              <p className="text-[#fafafa]/60 text-sm uppercase tracking-wide">Lessons Completed</p>
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
+              <p className="text-4xl font-black text-[#007A3D] mb-2">15</p>
+              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Lessons Completed</p>
             </div>
-            <div className="bg-[#141414] border border-[#27272a] rounded-xl p-6 text-center">
-              <p className="text-4xl font-black text-[#e63946] mb-2">{totalWatchTime}</p>
-              <p className="text-[#fafafa]/60 text-sm uppercase tracking-wide">Hours Watch Time</p>
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
+              <p className="text-4xl font-black text-[#CE1126] mb-2">{totalWatchTime}</p>
+              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Hours Watch Time</p>
             </div>
-            <div className="bg-[#141414] border border-[#27272a] rounded-xl p-6 text-center">
-              <p className="text-lg font-bold text-[#fafafa] mb-2">{completionDate}</p>
-              <p className="text-[#fafafa]/60 text-sm uppercase tracking-wide">Completed On</p>
+            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-6 text-center">
+              <p className="text-lg font-bold text-[#1a1a1a] mb-2">{completionDate}</p>
+              <p className="text-[#6b7280] text-sm uppercase tracking-wide">Completed On</p>
             </div>
           </div>
 
           {/* Pop-up Classes CTA */}
-          <div className="bg-gradient-to-r from-[#e63946]/10 via-[#141414] to-[#2a9d8f]/10 border border-[#27272a] rounded-2xl p-8 sm:p-12 text-center">
-            <h3 className="text-2xl sm:text-3xl font-black text-[#fafafa] uppercase tracking-tight mb-4">
+          <div className="bg-gradient-to-r from-[#CE1126]/5 via-[#ffffff] to-[#007A3D]/5 border border-[#e5e7eb] rounded-2xl p-8 sm:p-12 text-center">
+            <h3 className="text-2xl sm:text-3xl font-black text-[#1a1a1a] uppercase tracking-tight mb-4">
               Keep the Momentum Going
             </h3>
-            <p className="text-[#fafafa]/60 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-[#6b7280] text-lg max-w-2xl mx-auto mb-8">
               Now that you&apos;ve completed the online course, join our pop-up classes to practice
               in person with other dancers! Experience the energy of dancing dabka together
               and connect with your community.
@@ -278,7 +278,7 @@ export default function CertificatePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/pop-up-classes"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#fafafa] hover:bg-[#fafafa]/90 text-[#0a0a0a] font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105"
               >
                 Find Pop-Up Classes
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,7 +287,7 @@ export default function CertificatePage() {
               </Link>
               <Link
                 href="/dashboard"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-[#27272a] hover:border-[#fafafa]/30 text-[#fafafa] font-medium uppercase tracking-wide rounded-lg transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-[#e5e7eb] hover:border-[#1a1a1a]/30 text-[#1a1a1a] font-medium uppercase tracking-wide rounded-lg transition-colors"
               >
                 Back to Dashboard
               </Link>

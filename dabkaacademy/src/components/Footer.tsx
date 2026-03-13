@@ -34,7 +34,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#141414] text-[#fafafa] border-t border-[#27272a]">
+    <footer className="bg-[#1a1a1a] text-[#fafafa] border-t border-[#27272a]">
+      {/* Palestinian Flag Stripe Accent */}
+      <div className="flex h-1">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
       {/* Newsletter Section */}
       <div className="border-b border-[#27272a]">
         <div className="max-w-7xl mx-auto px-6 py-16 lg:px-8">
@@ -43,7 +50,7 @@ const Footer = () => {
               <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
                 Join the Movement
               </h3>
-              <p className="mt-2 text-[#71717a] text-sm md:text-base">
+              <p className="mt-2 text-[#a1a1aa] text-sm md:text-base">
                 Get exclusive updates on new classes, cultural events, and community gatherings.
               </p>
             </div>
@@ -57,11 +64,11 @@ const Footer = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="flex-1 lg:w-80 px-5 py-4 bg-[#27272a] border border-[#27272a] text-[#fafafa] placeholder-[#71717a] focus:outline-none focus:border-[#e63946] transition-colors font-medium"
+                className="flex-1 lg:w-80 px-5 py-4 bg-[#27272a] border border-[#3f3f46] text-[#fafafa] placeholder-[#71717a] focus:outline-none focus:border-[#007A3D] transition-colors font-medium"
               />
               <button
                 type="submit"
-                className="px-8 py-4 bg-[#e63946] text-[#fafafa] font-black uppercase tracking-wider hover:bg-[#d62839] transition-colors"
+                className="px-8 py-4 bg-[#CE1126] text-[#fafafa] font-black uppercase tracking-wider hover:bg-[#a80d1e] transition-colors"
               >
                 Subscribe
               </button>
@@ -78,13 +85,13 @@ const Footer = () => {
             <div className="flex flex-col gap-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter">
-                  Dabka<span className="text-[#e63946]">.</span>
+                  Dabka<span className="text-[#CE1126]">.</span>
                 </h2>
                 <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter -mt-2">
                   Academy
                 </h2>
               </div>
-              <p className="text-[#71717a] text-sm leading-relaxed max-w-xs">
+              <p className="text-[#a1a1aa] text-sm leading-relaxed max-w-xs">
                 Preserving Palestinian heritage through the art of Dabka.
                 Every step carries the rhythm of our ancestors, every movement tells our story.
               </p>
@@ -94,7 +101,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#e63946] transition-colors group"
+                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#007A3D] transition-colors group"
                 >
                   <svg
                     className="w-5 h-5 text-[#fafafa]"
@@ -108,7 +115,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="TikTok"
-                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#e63946] transition-colors group"
+                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#CE1126] transition-colors group"
                 >
                   <svg
                     className="w-5 h-5 text-[#fafafa]"
@@ -122,7 +129,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="YouTube"
-                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#e63946] transition-colors group"
+                  className="w-12 h-12 flex items-center justify-center bg-[#27272a] hover:bg-[#CE1126] transition-colors group"
                 >
                   <svg
                     className="w-5 h-5 text-[#fafafa]"
@@ -141,7 +148,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {/* Course Links */}
               <div>
-                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#71717a] mb-6">
+                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#007A3D] mb-6">
                   Course
                 </h4>
                 <ul className="space-y-4">
@@ -149,7 +156,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-[#fafafa] hover:text-[#e63946] transition-colors font-medium text-sm"
+                        className="text-[#fafafa] hover:text-[#CE1126] transition-colors font-medium text-sm"
                       >
                         {link.label}
                       </a>
@@ -160,7 +167,7 @@ const Footer = () => {
 
               {/* Classes Links */}
               <div>
-                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#71717a] mb-6">
+                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#007A3D] mb-6">
                   Classes
                 </h4>
                 <ul className="space-y-4">
@@ -168,7 +175,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-[#fafafa] hover:text-[#e63946] transition-colors font-medium text-sm"
+                        className="text-[#fafafa] hover:text-[#CE1126] transition-colors font-medium text-sm"
                       >
                         {link.label}
                       </a>
@@ -179,7 +186,7 @@ const Footer = () => {
 
               {/* Company Links */}
               <div>
-                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#71717a] mb-6">
+                <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#007A3D] mb-6">
                   Company
                 </h4>
                 <ul className="space-y-4">
@@ -187,7 +194,7 @@ const Footer = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-[#fafafa] hover:text-[#e63946] transition-colors font-medium text-sm"
+                        className="text-[#fafafa] hover:text-[#CE1126] transition-colors font-medium text-sm"
                       >
                         {link.label}
                       </a>
@@ -204,14 +211,21 @@ const Footer = () => {
       <div className="border-t border-[#27272a]">
         <div className="max-w-7xl mx-auto px-6 py-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="text-[#71717a] text-xs font-medium">
+            <p className="text-[#a1a1aa] text-xs font-medium">
               &copy; {currentYear} Dabka Academy. All rights reserved.
             </p>
-            <p className="text-[#71717a] text-xs font-medium">
-              Made with love for Palestine
+            <p className="text-[#a1a1aa] text-xs font-medium">
+              Made with <span className="text-[#CE1126]">love</span> for <span className="text-[#007A3D]">Palestine</span>
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Palestinian Flag Stripe Bottom */}
+      <div className="flex h-1">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
       </div>
     </footer>
   );
