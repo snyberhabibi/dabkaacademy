@@ -11,15 +11,23 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#fafafa]">
+      {/* Palestinian Flag Stripe - Top */}
+      <div className="fixed top-0 left-0 right-0 h-1 flex z-[60]">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#fafafa]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
       <Navbar />
 
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Back to Course Link */}
           <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 text-muted hover:text-foreground transition-colors text-xs sm:text-sm font-medium mb-5 sm:mb-8 group min-h-[44px]"
+            href="/"
+            className="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1a1a1a] transition-colors text-xs sm:text-sm font-medium mb-5 sm:mb-8 group min-h-[44px] uppercase tracking-wide"
           >
             <svg
               className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
@@ -34,14 +42,14 @@ export default function CheckoutPage() {
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            Back to Course
+            Back to Home
           </Link>
 
           {/* Page Header */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground mb-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight text-[#1a1a1a] mb-2">
             Checkout
           </h1>
-          <p className="text-sm sm:text-base text-muted mb-5 sm:mb-8">
+          <p className="text-sm sm:text-base text-[#6b7280] mb-5 sm:mb-8">
             Complete your purchase to get instant access
           </p>
 
@@ -49,35 +57,35 @@ export default function CheckoutPage() {
             {/* Left Column - Order Summary */}
             <div className="space-y-4 sm:space-y-6 order-2 md:order-1">
               {/* Order Summary Card */}
-              <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
-                <h2 className="text-base sm:text-lg font-bold uppercase tracking-wide text-foreground mb-3 sm:mb-4">
+              <div className="bg-[#ffffff] border-2 border-[#e5e7eb] p-4 sm:p-6">
+                <h2 className="text-base sm:text-lg font-black uppercase tracking-wide text-[#1a1a1a] mb-3 sm:mb-4">
                   Order Summary
                 </h2>
 
                 {/* Course Info */}
                 <div className="flex gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-accent text-xl sm:text-2xl font-black">DA</span>
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#CE1126]/10 flex items-center justify-center flex-shrink-0 border border-[#CE1126]/20">
+                    <span className="text-[#CE1126] text-xl sm:text-2xl font-black">DA</span>
                   </div>
                   <div className="min-w-0">
-                    <h3 className="text-sm sm:text-base font-bold text-foreground">
+                    <h3 className="text-sm sm:text-base font-bold text-[#1a1a1a]">
                       Dabka Academy - Full Course Access
                     </h3>
-                    <p className="text-xs sm:text-sm text-muted mt-1">
+                    <p className="text-xs sm:text-sm text-[#6b7280] mt-1">
                       Master Palestinian Dabka from beginner to performance ready
                     </p>
                   </div>
                 </div>
 
                 {/* What's Included */}
-                <div className="border-t border-border pt-3 sm:pt-4 mb-4 sm:mb-6">
-                  <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wide text-muted mb-2 sm:mb-3">
+                <div className="border-t border-[#e5e7eb] pt-3 sm:pt-4 mb-4 sm:mb-6">
+                  <h4 className="text-xs sm:text-sm font-black uppercase tracking-wide text-[#6b7280] mb-2 sm:mb-3">
                     What&apos;s Included
                   </h4>
                   <ul className="space-y-2 sm:space-y-3">
-                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground">
+                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -91,9 +99,9 @@ export default function CheckoutPage() {
                       </svg>
                       <span>15 video lessons</span>
                     </li>
-                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground">
+                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -107,9 +115,9 @@ export default function CheckoutPage() {
                       </svg>
                       <span>3 chapters (Foundations, Building Blocks, Performance Ready)</span>
                     </li>
-                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground">
+                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -123,9 +131,9 @@ export default function CheckoutPage() {
                       </svg>
                       <span>Lifetime access</span>
                     </li>
-                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground">
+                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -139,9 +147,9 @@ export default function CheckoutPage() {
                       </svg>
                       <span>Certificate of completion</span>
                     </li>
-                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-foreground">
+                    <li className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#1a1a1a]">
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green flex-shrink-0"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -159,24 +167,24 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Price */}
-                <div className="border-t border-border pt-3 sm:pt-4">
+                <div className="border-t border-[#e5e7eb] pt-3 sm:pt-4">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm sm:text-base text-muted">Subtotal</span>
-                    <span className="text-sm sm:text-base text-foreground">$29.99</span>
+                    <span className="text-sm sm:text-base text-[#6b7280]">Subtotal</span>
+                    <span className="text-sm sm:text-base text-[#1a1a1a]">$29.99</span>
                   </div>
-                  <div className="flex justify-between items-center text-base sm:text-lg font-bold">
-                    <span className="text-foreground">Total</span>
-                    <span className="text-foreground">$29.99</span>
+                  <div className="flex justify-between items-center text-base sm:text-lg font-black">
+                    <span className="text-[#1a1a1a]">Total</span>
+                    <span className="text-[#1a1a1a]">$29.99</span>
                   </div>
-                  <p className="text-xs text-muted mt-2">One-time payment</p>
+                  <p className="text-xs text-[#6b7280] mt-2">One-time payment</p>
                 </div>
               </div>
 
               {/* Money Back Guarantee Badge */}
-              <div className="bg-accent-green/10 border border-accent-green/30 rounded-lg p-3 sm:p-4 flex items-center gap-3">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-accent-green/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="bg-[#007A3D]/10 border-2 border-[#007A3D]/30 p-3 sm:p-4 flex items-center gap-3">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#007A3D]/20 flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#007A3D]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -190,8 +198,8 @@ export default function CheckoutPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm sm:text-base font-bold text-foreground">30-Day Money Back Guarantee</p>
-                  <p className="text-xs sm:text-sm text-muted">
+                  <p className="text-sm sm:text-base font-black text-[#1a1a1a]">30-Day Money Back Guarantee</p>
+                  <p className="text-xs sm:text-sm text-[#6b7280]">
                     Not satisfied? Get a full refund, no questions asked.
                   </p>
                 </div>
@@ -202,22 +210,22 @@ export default function CheckoutPage() {
             <div className="space-y-4 sm:space-y-6 order-1 md:order-2">
               {/* User Info Summary */}
               {user.isLoggedIn && (
-                <div className="bg-card border border-border rounded-lg p-3 sm:p-4">
+                <div className="bg-[#ffffff] border-2 border-[#e5e7eb] p-3 sm:p-4">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-accent font-bold text-xs sm:text-sm">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#CE1126]/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-[#CE1126] font-black text-xs sm:text-sm">
                           {user.email.charAt(0).toUpperCase()}
                         </span>
                       </div>
                       <div className="min-w-0">
-                        <p className="text-xs sm:text-sm text-muted">Purchasing as</p>
-                        <p className="text-sm sm:text-base text-foreground font-medium truncate">{user.email}</p>
+                        <p className="text-xs sm:text-sm text-[#6b7280]">Purchasing as</p>
+                        <p className="text-sm sm:text-base text-[#1a1a1a] font-medium truncate">{user.email}</p>
                       </div>
                     </div>
                     <Link
                       href="/login"
-                      className="text-xs sm:text-sm text-accent hover:text-accent/80 transition-colors whitespace-nowrap"
+                      className="text-xs sm:text-sm text-[#CE1126] hover:text-[#a80d1e] transition-colors whitespace-nowrap font-bold uppercase"
                     >
                       Not you? Sign out
                     </Link>
@@ -226,15 +234,15 @@ export default function CheckoutPage() {
               )}
 
               {/* Payment Form Card */}
-              <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
-                <h2 className="text-base sm:text-lg font-bold uppercase tracking-wide text-foreground mb-3 sm:mb-4">
+              <div className="bg-[#ffffff] border-2 border-[#e5e7eb] p-4 sm:p-6">
+                <h2 className="text-base sm:text-lg font-black uppercase tracking-wide text-[#1a1a1a] mb-3 sm:mb-4">
                   Payment Details
                 </h2>
 
                 {/* Stripe Payment Form Placeholder */}
-                <div className="border-2 border-dashed border-border rounded-lg p-5 sm:p-8 mb-4 sm:mb-6">
+                <div className="border-2 border-dashed border-[#e5e7eb] p-5 sm:p-8 mb-4 sm:mb-6">
                   <div className="text-center">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#635BFF]/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#635BFF]/20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
                       <svg
                         className="w-6 h-6 sm:w-8 sm:h-8 text-[#635BFF]"
                         viewBox="0 0 24 24"
@@ -243,8 +251,8 @@ export default function CheckoutPage() {
                         <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z" />
                       </svg>
                     </div>
-                    <p className="text-sm sm:text-base text-foreground font-medium mb-1">Stripe Payment Form</p>
-                    <p className="text-xs sm:text-sm text-muted">
+                    <p className="text-sm sm:text-base text-[#1a1a1a] font-bold mb-1">Stripe Payment Form</p>
+                    <p className="text-xs sm:text-sm text-[#6b7280]">
                       Secure payment processing will appear here
                     </p>
                   </div>
@@ -253,7 +261,7 @@ export default function CheckoutPage() {
                 {/* Pay Button */}
                 <button
                   type="button"
-                  className="w-full bg-accent hover:bg-accent/90 text-white text-sm sm:text-base font-bold py-4 px-6 rounded-lg uppercase tracking-wide transition-colors flex items-center justify-center gap-2 min-h-[52px]"
+                  className="w-full bg-[#CE1126] hover:bg-[#a80d1e] text-white text-sm sm:text-base font-black py-4 px-6 uppercase tracking-wide transition-all hover:translate-y-[-2px] hover:shadow-lg flex items-center justify-center gap-2 min-h-[52px]"
                 >
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5"
@@ -273,12 +281,12 @@ export default function CheckoutPage() {
               </div>
 
               {/* Security Badges */}
-              <div className="bg-card border border-border rounded-lg p-3 sm:p-4">
+              <div className="bg-[#ffffff] border-2 border-[#e5e7eb] p-3 sm:p-4">
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-3 sm:mb-4">
                   {/* Secure Checkout */}
-                  <div className="flex items-center gap-2 text-muted">
+                  <div className="flex items-center gap-2 text-[#6b7280]">
                     <svg
-                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-green"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#007A3D]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -294,9 +302,9 @@ export default function CheckoutPage() {
                   </div>
 
                   {/* SSL Encrypted */}
-                  <div className="flex items-center gap-2 text-muted">
+                  <div className="flex items-center gap-2 text-[#6b7280]">
                     <svg
-                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-green"
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#007A3D]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -313,41 +321,41 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Payment Method Icons */}
-                <div className="border-t border-border pt-3 sm:pt-4">
-                  <p className="text-xs text-muted text-center mb-2 sm:mb-3">Accepted payment methods</p>
+                <div className="border-t border-[#e5e7eb] pt-3 sm:pt-4">
+                  <p className="text-xs text-[#6b7280] text-center mb-2 sm:mb-3 uppercase tracking-wide">Accepted payment methods</p>
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
                     {/* Visa */}
-                    <div className="bg-background px-2 sm:px-3 py-1 sm:py-1.5 rounded border border-border">
-                      <span className="text-[10px] sm:text-xs font-bold text-[#1A1F71]">VISA</span>
+                    <div className="bg-[#fafafa] px-2 sm:px-3 py-1 sm:py-1.5 border border-[#e5e7eb]">
+                      <span className="text-[10px] sm:text-xs font-black text-[#1A1F71]">VISA</span>
                     </div>
                     {/* Mastercard */}
-                    <div className="bg-background px-2 sm:px-3 py-1 sm:py-1.5 rounded border border-border">
-                      <span className="text-[10px] sm:text-xs font-bold text-[#EB001B]">MC</span>
+                    <div className="bg-[#fafafa] px-2 sm:px-3 py-1 sm:py-1.5 border border-[#e5e7eb]">
+                      <span className="text-[10px] sm:text-xs font-black text-[#EB001B]">MC</span>
                     </div>
                     {/* Amex */}
-                    <div className="bg-background px-2 sm:px-3 py-1 sm:py-1.5 rounded border border-border">
-                      <span className="text-[10px] sm:text-xs font-bold text-[#006FCF]">AMEX</span>
+                    <div className="bg-[#fafafa] px-2 sm:px-3 py-1 sm:py-1.5 border border-[#e5e7eb]">
+                      <span className="text-[10px] sm:text-xs font-black text-[#006FCF]">AMEX</span>
                     </div>
                     {/* Apple Pay */}
-                    <div className="bg-background px-2 sm:px-3 py-1 sm:py-1.5 rounded border border-border hidden sm:block">
-                      <span className="text-[10px] sm:text-xs font-bold text-foreground">Apple Pay</span>
+                    <div className="bg-[#fafafa] px-2 sm:px-3 py-1 sm:py-1.5 border border-[#e5e7eb] hidden sm:block">
+                      <span className="text-[10px] sm:text-xs font-black text-[#1a1a1a]">Apple Pay</span>
                     </div>
                     {/* Google Pay */}
-                    <div className="bg-background px-2 sm:px-3 py-1 sm:py-1.5 rounded border border-border hidden sm:block">
-                      <span className="text-[10px] sm:text-xs font-bold text-foreground">G Pay</span>
+                    <div className="bg-[#fafafa] px-2 sm:px-3 py-1 sm:py-1.5 border border-[#e5e7eb] hidden sm:block">
+                      <span className="text-[10px] sm:text-xs font-black text-[#1a1a1a]">G Pay</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Terms */}
-              <p className="text-xs text-muted text-center px-2">
+              <p className="text-xs text-[#6b7280] text-center px-2">
                 By completing this purchase, you agree to our{" "}
-                <Link href="/terms" className="text-foreground hover:text-accent transition-colors">
+                <Link href="/terms" className="text-[#1a1a1a] hover:text-[#CE1126] transition-colors font-medium">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link href="/privacy" className="text-foreground hover:text-accent transition-colors">
+                <Link href="/privacy" className="text-[#1a1a1a] hover:text-[#CE1126] transition-colors font-medium">
                   Privacy Policy
                 </Link>
                 .

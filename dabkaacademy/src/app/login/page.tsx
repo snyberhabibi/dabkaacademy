@@ -4,19 +4,34 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#fafafa] px-4 py-8 sm:py-12">
+    <div className="min-h-screen flex items-center justify-center bg-[#fafafa] px-4 py-8 sm:py-12 relative overflow-hidden">
+      {/* Palestinian Flag Stripe - Top */}
+      <div className="fixed top-0 left-0 right-0 h-1 flex z-[60]">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#fafafa]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 5h-10l5-5zM0 30l5-5v10l-5-5zM60 30l-5 5v-10l5 5zM30 60l-5-5h10l-5 5zM15 15l5 5h-10l5-5zM45 15l5 5h-10l5-5zM15 45l5 5h-10l5-5zM45 45l5 5h-10l5-5z' fill='%23CE1126' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+      }} />
+
       {/* Login Card */}
-      <div className="w-full max-w-md bg-[#ffffff] border border-[#e5e7eb] rounded-2xl p-5 sm:p-8 shadow-2xl">
+      <div className="relative w-full max-w-md bg-[#ffffff] border-2 border-[#1a1a1a] p-5 sm:p-8 shadow-[8px_8px_0_0_#1a1a1a]">
         {/* Logo */}
         <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-[#1a1a1a] uppercase">
-            Dabka<span className="text-[#CE1126]">.</span>Academy
-          </h1>
+          <Link href="/" className="inline-block">
+            <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-[#1a1a1a] uppercase">
+              DABKA<span className="text-[#CE1126]"> ACADEMY</span>
+            </h1>
+          </Link>
         </div>
 
         {/* Welcome Text */}
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#1a1a1a] mb-2">Welcome Back</h2>
+          <h2 className="text-xl sm:text-2xl font-black text-[#1a1a1a] uppercase tracking-tight mb-2">Welcome Back</h2>
           <p className="text-[#6b7280] text-xs sm:text-sm">
             Continue your dabka journey
           </p>
@@ -25,7 +40,7 @@ export default function LoginPage() {
         {/* Google Sign-In Button */}
         <button
           type="button"
-          className="w-full flex items-center justify-center gap-2 sm:gap-3 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-semibold py-4 px-4 sm:px-6 rounded-xl transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] min-h-[52px]"
+          className="w-full flex items-center justify-center gap-2 sm:gap-3 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-bold uppercase tracking-wide py-4 px-4 sm:px-6 transition-all duration-200 hover:translate-y-[-2px] hover:shadow-lg active:translate-y-0 min-h-[52px]"
         >
           {/* Google Icon SVG */}
           <svg
@@ -57,14 +72,14 @@ export default function LoginPage() {
         {/* Divider */}
         <div className="flex items-center gap-3 sm:gap-4 my-6 sm:my-8">
           <div className="flex-1 h-px bg-[#e5e7eb]"></div>
-          <span className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wider font-medium">or</span>
+          <span className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wider font-bold">or</span>
           <div className="flex-1 h-px bg-[#e5e7eb]"></div>
         </div>
 
         {/* Email Input (Disabled) */}
         <div className="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
           <div>
-            <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-[#6b7280] mb-2">
+            <label htmlFor="email" className="block text-xs sm:text-sm font-bold text-[#1a1a1a] mb-2 uppercase tracking-wide">
               Email
             </label>
             <input
@@ -72,13 +87,13 @@ export default function LoginPage() {
               id="email"
               placeholder="you@example.com"
               disabled
-              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
+              className="w-full bg-[#f3f4f6] border-2 border-[#e5e7eb] px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
             />
           </div>
 
           {/* Password Input (Disabled) */}
           <div>
-            <label htmlFor="password" className="block text-xs sm:text-sm font-medium text-[#6b7280] mb-2">
+            <label htmlFor="password" className="block text-xs sm:text-sm font-bold text-[#1a1a1a] mb-2 uppercase tracking-wide">
               Password
             </label>
             <input
@@ -86,7 +101,7 @@ export default function LoginPage() {
               id="password"
               placeholder="••••••••"
               disabled
-              className="w-full bg-[#f3f4f6] border border-[#e5e7eb] rounded-xl px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
+              className="w-full bg-[#f3f4f6] border-2 border-[#e5e7eb] px-4 py-3 text-sm sm:text-base text-[#6b7280] placeholder-[#9ca3af] cursor-not-allowed opacity-50 focus:outline-none min-h-[48px]"
             />
           </div>
         </div>
@@ -95,7 +110,7 @@ export default function LoginPage() {
         <button
           type="button"
           disabled
-          className="w-full bg-[#CE1126] text-[#fafafa] text-sm sm:text-base font-semibold py-4 px-6 rounded-xl opacity-50 cursor-not-allowed min-h-[52px]"
+          className="w-full bg-[#CE1126] text-[#fafafa] text-sm sm:text-base font-bold uppercase tracking-wide py-4 px-6 opacity-50 cursor-not-allowed min-h-[52px]"
         >
           Sign In
         </button>
@@ -104,8 +119,8 @@ export default function LoginPage() {
         <p className="text-center mt-5 sm:mt-6 text-[#6b7280] text-xs sm:text-sm">
           Don&apos;t have an account?{" "}
           <Link
-            href="/signup"
-            className="text-[#CE1126] font-semibold hover:underline transition-all"
+            href="/checkout"
+            className="text-[#CE1126] font-bold hover:underline transition-all uppercase"
           >
             Get Started
           </Link>
@@ -115,7 +130,7 @@ export default function LoginPage() {
         <div className="text-center mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-[#e5e7eb]">
           <Link
             href="/"
-            className="text-[#6b7280] text-xs sm:text-sm hover:text-[#1a1a1a] transition-colors inline-flex items-center gap-2 min-h-[44px]"
+            className="text-[#6b7280] text-xs sm:text-sm hover:text-[#1a1a1a] transition-colors inline-flex items-center gap-2 min-h-[44px] font-medium uppercase tracking-wide"
           >
             <svg
               width="16"

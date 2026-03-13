@@ -149,7 +149,15 @@ export default function LessonPage({
   const totalLessons = mockLessons.length;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#fafafa]">
+      {/* Palestinian Flag Stripe - Top */}
+      <div className="fixed top-0 left-0 right-0 h-1 flex z-[60]">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#fafafa]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
       <Navbar />
 
       <main className="pt-20">
@@ -157,7 +165,7 @@ export default function LessonPage({
           {/* Back to Dashboard */}
           <Link
             href="/dashboard"
-            className="inline-flex items-center gap-2 text-muted hover:text-foreground transition-colors mb-6 group"
+            className="inline-flex items-center gap-2 text-[#6b7280] hover:text-[#1a1a1a] transition-colors mb-6 group"
           >
             <svg
               className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
@@ -183,19 +191,19 @@ export default function LessonPage({
               {/* Video Player Area */}
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h1 className="text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                  <h1 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] tracking-tight">
                     Lesson {currentLesson.id}: {currentLesson.title}
                   </h1>
-                  <span className="text-muted text-sm font-medium bg-card px-3 py-1 rounded-full border border-border">
+                  <span className="text-[#6b7280] text-sm font-medium bg-[#ffffff] px-3 py-1  border border-[#e5e7eb]">
                     {currentLesson.duration}
                   </span>
                 </div>
 
                 {/* Video Placeholder */}
-                <div className="relative aspect-video bg-card rounded-lg border border-border overflow-hidden group cursor-pointer hover:border-accent transition-colors">
+                <div className="relative aspect-video bg-[#ffffff]  border border-[#e5e7eb] overflow-hidden group cursor-pointer hover:border-accent transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Play Button */}
-                    <div className="w-20 h-20 rounded-full bg-accent/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+                    <div className="w-20 h-20  bg-[#CE1126]/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
                       <svg
                         className="w-8 h-8 text-white ml-1"
                         fill="currentColor"
@@ -210,7 +218,7 @@ export default function LessonPage({
                   {/* Bottom info bar */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-[#CE1126]  animate-pulse" />
                       <span className="text-xs text-white/80 font-medium uppercase tracking-wide">
                         Ready to Play
                       </span>
@@ -221,13 +229,13 @@ export default function LessonPage({
               </div>
 
               {/* Lesson Navigation */}
-              <div className="flex items-center justify-between bg-card rounded-lg border border-border p-4">
+              <div className="flex items-center justify-between bg-[#ffffff]  border border-[#e5e7eb] p-4">
                 <Link
                   href={prevLesson ? `/lesson/${prevLesson.id}` : "#"}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2  transition-all ${
                     prevLesson
-                      ? "bg-background hover:bg-card-hover text-foreground border border-border"
-                      : "bg-background/50 text-muted cursor-not-allowed border border-border/50"
+                      ? "bg-[#fafafa] hover:bg-[#ffffff]-hover text-[#1a1a1a] border border-[#e5e7eb]"
+                      : "bg-[#fafafa]/50 text-[#6b7280] cursor-not-allowed border border-[#e5e7eb]/50"
                   }`}
                 >
                   <svg
@@ -246,16 +254,16 @@ export default function LessonPage({
                   <span className="text-sm font-medium">Previous</span>
                 </Link>
 
-                <span className="text-muted text-sm font-medium">
+                <span className="text-[#6b7280] text-sm font-medium">
                   Lesson {currentIndex + 1} of {totalLessons}
                 </span>
 
                 <Link
                   href={nextLesson ? `/lesson/${nextLesson.id}` : "#"}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2  transition-all ${
                     nextLesson
-                      ? "bg-background hover:bg-card-hover text-foreground border border-border"
-                      : "bg-background/50 text-muted cursor-not-allowed border border-border/50"
+                      ? "bg-[#fafafa] hover:bg-[#ffffff]-hover text-[#1a1a1a] border border-[#e5e7eb]"
+                      : "bg-[#fafafa]/50 text-[#6b7280] cursor-not-allowed border border-[#e5e7eb]/50"
                   }`}
                 >
                   <span className="text-sm font-medium">Next</span>
@@ -278,10 +286,10 @@ export default function LessonPage({
               {/* Mark as Complete Button */}
               <button
                 onClick={() => setIsCompleted(!isCompleted)}
-                className={`w-full py-4 rounded-lg font-bold text-sm uppercase tracking-wide transition-all ${
+                className={`w-full py-4  font-bold text-sm uppercase tracking-wide transition-all ${
                   isCompleted
-                    ? "bg-accent-green text-white"
-                    : "bg-accent hover:bg-accent/90 text-white"
+                    ? "bg-[#CE1126]-green text-white"
+                    : "bg-[#CE1126] hover:bg-[#CE1126]/90 text-white"
                 }`}
               >
                 {isCompleted ? (
@@ -307,31 +315,31 @@ export default function LessonPage({
               </button>
 
               {/* Lesson Info Panel */}
-              <div className="bg-card rounded-lg border border-border p-6 space-y-6">
+              <div className="bg-[#ffffff]  border border-[#e5e7eb] p-6 space-y-6">
                 {/* Description */}
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-3 uppercase tracking-wide">
+                  <h3 className="text-lg font-bold text-[#1a1a1a] mb-3 uppercase tracking-wide">
                     About This Lesson
                   </h3>
-                  <p className="text-muted leading-relaxed">
+                  <p className="text-[#6b7280] leading-relaxed">
                     {currentLesson.description}
                   </p>
                 </div>
 
                 {/* Key Takeaways */}
                 <div>
-                  <h3 className="text-lg font-bold text-foreground mb-3 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 bg-accent rounded-full" />
+                  <h3 className="text-lg font-bold text-[#1a1a1a] mb-3 uppercase tracking-wide flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#CE1126] " />
                     Key Takeaways
                   </h3>
                   <ul className="space-y-2">
                     {currentLesson.keyTakeaways.map((takeaway, index) => (
                       <li
                         key={index}
-                        className="flex items-start gap-3 text-muted"
+                        className="flex items-start gap-3 text-[#6b7280]"
                       >
                         <svg
-                          className="w-5 h-5 text-accent-green mt-0.5 flex-shrink-0"
+                          className="w-5 h-5 text-[#CE1126]-green mt-0.5 flex-shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -350,18 +358,18 @@ export default function LessonPage({
                 </div>
 
                 {/* Practice Tips */}
-                <div className="bg-background rounded-lg p-4 border border-border">
-                  <h3 className="text-lg font-bold text-foreground mb-3 uppercase tracking-wide flex items-center gap-2">
-                    <span className="w-2 h-2 bg-accent-green rounded-full" />
+                <div className="bg-[#fafafa]  p-4 border border-[#e5e7eb]">
+                  <h3 className="text-lg font-bold text-[#1a1a1a] mb-3 uppercase tracking-wide flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#CE1126]-green " />
                     Practice Tips
                   </h3>
                   <ul className="space-y-2">
                     {currentLesson.practiceTips.map((tip, index) => (
                       <li
                         key={index}
-                        className="flex items-start gap-3 text-muted"
+                        className="flex items-start gap-3 text-[#6b7280]"
                       >
-                        <span className="text-accent font-bold text-sm">
+                        <span className="text-[#CE1126] font-bold text-sm">
                           {index + 1}.
                         </span>
                         <span>{tip}</span>
@@ -375,12 +383,12 @@ export default function LessonPage({
             {/* Sidebar - Chapter Overview */}
             <div className="lg:col-span-1">
               <div className="sticky top-28">
-                <div className="bg-card rounded-lg border border-border overflow-hidden">
-                  <div className="p-4 border-b border-border">
-                    <h2 className="text-lg font-bold text-foreground uppercase tracking-wide">
+                <div className="bg-[#ffffff]  border border-[#e5e7eb] overflow-hidden">
+                  <div className="p-4 border-b border-[#e5e7eb]">
+                    <h2 className="text-lg font-bold text-[#1a1a1a] uppercase tracking-wide">
                       Course Content
                     </h2>
-                    <p className="text-sm text-muted mt-1">
+                    <p className="text-sm text-[#6b7280] mt-1">
                       {totalLessons} lessons
                     </p>
                   </div>
@@ -397,18 +405,18 @@ export default function LessonPage({
                                 : chapter.number
                             )
                           }
-                          className="w-full px-4 py-3 flex items-center justify-between hover:bg-card-hover transition-colors"
+                          className="w-full px-4 py-3 flex items-center justify-between hover:bg-[#ffffff]-hover transition-colors"
                         >
                           <div className="flex items-center gap-3">
-                            <span className="w-6 h-6 rounded bg-accent/20 text-accent text-xs font-bold flex items-center justify-center">
+                            <span className="w-6 h-6 rounded bg-[#CE1126]/20 text-[#CE1126] text-xs font-bold flex items-center justify-center">
                               {chapter.number}
                             </span>
-                            <span className="font-semibold text-foreground text-sm">
+                            <span className="font-semibold text-[#1a1a1a] text-sm">
                               {chapter.title}
                             </span>
                           </div>
                           <svg
-                            className={`w-4 h-4 text-muted transition-transform ${
+                            className={`w-4 h-4 text-[#6b7280] transition-transform ${
                               chapterOpen === chapter.number ? "rotate-180" : ""
                             }`}
                             fill="none"
@@ -426,7 +434,7 @@ export default function LessonPage({
 
                         {/* Chapter Lessons */}
                         {chapterOpen === chapter.number && (
-                          <div className="bg-background">
+                          <div className="bg-[#fafafa]">
                             {chapter.lessons.map((lesson) => {
                               const isCurrent = lesson.id === currentLesson.id;
                               const lessonCompleted =
@@ -440,16 +448,16 @@ export default function LessonPage({
                                   href={`/lesson/${lesson.id}`}
                                   className={`flex items-center gap-3 px-4 py-3 border-l-2 transition-colors ${
                                     isCurrent
-                                      ? "border-l-accent bg-accent/10"
-                                      : "border-l-transparent hover:bg-card-hover"
+                                      ? "border-l-accent bg-[#CE1126]/10"
+                                      : "border-l-transparent hover:bg-[#ffffff]-hover"
                                   }`}
                                 >
                                   {/* Completion Status */}
                                   <div
-                                    className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                                    className={`w-5 h-5  flex items-center justify-center flex-shrink-0 ${
                                       lessonCompleted
-                                        ? "bg-accent-green"
-                                        : "border border-border"
+                                        ? "bg-[#CE1126]-green"
+                                        : "border border-[#e5e7eb]"
                                     }`}
                                   >
                                     {lessonCompleted && (
@@ -474,20 +482,20 @@ export default function LessonPage({
                                     <p
                                       className={`text-sm truncate ${
                                         isCurrent
-                                          ? "text-foreground font-medium"
-                                          : "text-muted"
+                                          ? "text-[#1a1a1a] font-medium"
+                                          : "text-[#6b7280]"
                                       }`}
                                     >
                                       {lesson.title}
                                     </p>
-                                    <p className="text-xs text-muted/60">
+                                    <p className="text-xs text-[#6b7280]/60">
                                       {lesson.duration}
                                     </p>
                                   </div>
 
                                   {/* Current Indicator */}
                                   {isCurrent && (
-                                    <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                                    <div className="w-2 h-2  bg-[#CE1126] animate-pulse" />
                                   )}
                                 </Link>
                               );

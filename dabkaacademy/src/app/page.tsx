@@ -12,6 +12,12 @@ const PlayIcon = () => (
   </svg>
 );
 
+const ArrowRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+  </svg>
+);
+
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
     <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
@@ -30,46 +36,8 @@ const ChevronDownIcon = () => (
   </svg>
 );
 
-// Feature icons
-const FootstepsIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" />
-    <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
-  </svg>
-);
-
-const UsersIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
-  </svg>
-);
-
-const TrophyIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path fillRule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15.19a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 013.16 5.337a45.6 45.6 0 012.006-.343v.256zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 01-2.863 3.207 6.72 6.72 0 00.857-3.294z" clipRule="evenodd" />
-  </svg>
-);
-
-const BookIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
-  </svg>
-);
-
-const MusicIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path fillRule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clipRule="evenodd" />
-  </svg>
-);
-
-const HeartIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-  </svg>
-);
-
 const MapPinIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
     <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
   </svg>
 );
@@ -95,40 +63,6 @@ const faqs = [
   {
     question: "Will there be live sessions or is it all pre-recorded?",
     answer: "The main course content is pre-recorded for flexibility, but we also host monthly live Q&A sessions where you can interact with the instructor and other students."
-  }
-];
-
-// Features Data
-const features = [
-  {
-    icon: <FootstepsIcon />,
-    title: "Basic Steps",
-    description: "Master the foundational steps and rhythms that form the backbone of dabka dance."
-  },
-  {
-    icon: <UsersIcon />,
-    title: "Traditional Formations",
-    description: "Learn the iconic line formations and synchronized group movements."
-  },
-  {
-    icon: <TrophyIcon />,
-    title: "Performance Ready",
-    description: "Build the skills and confidence to perform at weddings and cultural events."
-  },
-  {
-    icon: <BookIcon />,
-    title: "Cultural Context",
-    description: "Understand the rich history and meaning behind every movement."
-  },
-  {
-    icon: <MusicIcon />,
-    title: "Music & Rhythm",
-    description: "Develop your ear for traditional dabka music and timing."
-  },
-  {
-    icon: <HeartIcon />,
-    title: "Community",
-    description: "Join a global community of dancers keeping the tradition alive."
   }
 ];
 
@@ -174,14 +108,14 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     <div className="border-b border-[#e5e7eb]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 sm:py-6 flex items-center justify-between text-left hover:text-[#CE1126] transition-colors min-h-[56px]"
+        className="w-full py-5 sm:py-6 flex items-center justify-between text-left hover:text-[#CE1126] transition-colors min-h-[56px]"
       >
-        <span className="text-base sm:text-lg font-semibold pr-4">{question}</span>
+        <span className="text-base sm:text-lg font-bold pr-4">{question}</span>
         <span className={`transform transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
           <ChevronDownIcon />
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-4 sm:pb-6' : 'max-h-0'}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-5 sm:pb-6' : 'max-h-0'}`}>
         <p className="text-sm sm:text-base text-[#6b7280]">{answer}</p>
       </div>
     </div>
@@ -191,93 +125,157 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#fafafa] text-[#1a1a1a] overflow-x-hidden">
+      {/* Palestinian Flag Stripe - Top */}
+      <div className="fixed top-0 left-0 right-0 h-1 flex z-[60]">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#fafafa]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#fafafa] via-[#ffffff] to-[#fafafa]" />
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #e5e7eb 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        {/* Tatreez Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l5 5h-10l5-5zM0 30l5-5v10l-5-5zM60 30l-5 5v-10l5 5zM30 60l-5-5h10l-5 5zM15 15l5 5h-10l5-5zM45 15l5 5h-10l5-5zM15 45l5 5h-10l5-5zM45 45l5 5h-10l5-5z' fill='%23CE1126' fill-rule='evenodd'/%3E%3C/svg%3E")`,
         }} />
 
-        {/* Accent Glow */}
-        <div className="absolute top-1/4 left-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#CE1126] rounded-full blur-[100px] sm:blur-[150px] opacity-15" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-96 h-48 sm:h-96 bg-[#007A3D] rounded-full blur-[100px] sm:blur-[150px] opacity-10" />
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 py-12 sm:py-20 w-full">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#ffffff] border border-[#e5e7eb] rounded-full mb-6 sm:mb-8">
-            <span className="w-2 h-2 bg-[#007A3D] rounded-full animate-pulse" />
-            <span className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">New Course Available</span>
-          </div>
-
-          {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 sm:mb-6 px-2">
-            Master the Art of
-            <span className="block text-[#CE1126]">Dabka</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-base sm:text-xl md:text-2xl text-[#6b7280] max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
-            Learn the iconic Palestinian traditional dance from anywhere in the world.
-            From beginner to performance-ready in just 15 lessons.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16 px-2">
-            <Link
-              href="/checkout"
-              className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-[#CE1126] text-white text-sm sm:text-base font-bold uppercase tracking-wider rounded-none hover:bg-[#a30d1e] transition-colors flex items-center justify-center gap-2 min-h-[52px]"
-            >
-              Start Learning - $29.99
-            </Link>
-            <button className="w-full sm:w-auto px-6 sm:px-8 py-4 bg-transparent border-2 border-[#e5e7eb] text-[#1a1a1a] text-sm sm:text-base font-bold uppercase tracking-wider rounded-none hover:border-[#1a1a1a] transition-colors flex items-center justify-center gap-2 min-h-[52px]">
-              <PlayIcon />
-              Watch Preview
-            </button>
-          </div>
-
-          {/* Video Placeholder */}
-          <div className="relative max-w-4xl mx-auto px-2 sm:px-0">
-            <div className="aspect-video bg-[#ffffff] border border-[#e5e7eb] flex items-center justify-center group cursor-pointer hover:border-[#CE1126] transition-colors">
-              <div className="w-14 h-14 sm:w-20 sm:h-20 bg-[#CE1126] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <PlayIcon />
+            {/* Text Content */}
+            <div className="lg:w-7/12 w-full">
+              {/* Badge */}
+              <div className="inline-block bg-[#007A3D] text-white px-3 py-1.5 mb-6">
+                <p className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase">New Course Available</p>
               </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Preview Video</span>
+
+              {/* Massive Headline */}
+              <h1 className="mb-6 sm:mb-8">
+                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase text-[#1a1a1a] tracking-tighter">
+                  Master
+                </span>
+                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase text-[#1a1a1a] tracking-tighter">
+                  The Art
+                </span>
+                <span className="block text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] font-black uppercase tracking-tighter">
+                  Of <span className="text-[#CE1126]">Dabka</span>
+                </span>
+              </h1>
+
+              {/* Subheadline */}
+              <p className="text-base sm:text-lg md:text-xl text-[#6b7280] max-w-xl mb-8 sm:mb-10 font-medium leading-relaxed">
+                Learn the iconic Palestinian traditional dance from anywhere. 15 intensive lessons to take you from first stomp to performance-ready mastery.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12 sm:mb-16">
+                <Link
+                  href="/checkout"
+                  className="bg-[#CE1126] text-white px-6 sm:px-8 py-4 sm:py-5 text-sm font-black tracking-[0.15em] uppercase flex items-center justify-center gap-3 transition-all hover:translate-y-[-2px] hover:shadow-[0_10px_20px_-10px_rgba(206,17,38,0.4)] min-h-[52px]"
+                >
+                  Start Learning — $29.99
+                  <ArrowRightIcon />
+                </Link>
+                <button className="border-2 border-[#1a1a1a] text-[#1a1a1a] px-6 sm:px-8 py-4 sm:py-5 text-sm font-black tracking-[0.15em] uppercase flex items-center justify-center gap-3 transition-all hover:bg-[#1a1a1a] hover:text-white min-h-[52px]">
+                  Watch Preview
+                  <PlayIcon />
+                </button>
+              </div>
+
+              {/* Stats */}
+              <div className="flex flex-wrap items-center gap-8 sm:gap-12 border-t border-[#e5e7eb] pt-8">
+                <div>
+                  <p className="text-2xl sm:text-3xl font-black">1.2k+</p>
+                  <p className="text-[10px] sm:text-xs font-bold tracking-widest text-[#6b7280] uppercase">Students Enrolled</p>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-black">15</p>
+                  <p className="text-[10px] sm:text-xs font-bold tracking-widest text-[#6b7280] uppercase">Master Modules</p>
+                </div>
+                <div>
+                  <p className="text-2xl sm:text-3xl font-black">4.9/5</p>
+                  <p className="text-[10px] sm:text-xs font-bold tracking-widest text-[#6b7280] uppercase">Course Rating</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Video Preview */}
+            <div className="lg:w-5/12 w-full">
+              <div className="relative aspect-[4/5] sm:aspect-[4/5] bg-[#1a1a1a] group overflow-hidden border-4 sm:border-8 border-white shadow-2xl cursor-pointer">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+
+                {/* Play Button */}
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#CE1126] flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <PlayIcon />
+                  </div>
+                </div>
+
+                {/* Bottom Info */}
+                <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-20">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#CE1126] flex items-center justify-center">
+                      <PlayIcon />
+                    </div>
+                    <div>
+                      <p className="text-white font-black uppercase tracking-widest text-xs">Intro Teaser</p>
+                      <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest">02:45 MINS</p>
+                    </div>
+                  </div>
+                  <div className="w-full h-1 bg-white/20">
+                    <div className="w-1/3 h-full bg-[#CE1126]"></div>
+                  </div>
+                </div>
+
+                {/* Badges */}
+                <div className="absolute top-4 sm:top-8 right-4 sm:right-8 flex flex-col gap-2 z-20">
+                  <span className="bg-white text-black px-3 py-1 text-[10px] font-black uppercase tracking-tighter">4K Ultra HD</span>
+                  <span className="bg-[#CE1126] text-white px-3 py-1 text-[10px] font-black uppercase tracking-tighter">Heritage Series</span>
+                </div>
+
+                {/* Flag Corner */}
+                <div className="absolute top-0 left-0 w-8 h-8 sm:w-12 sm:h-12 flex z-20">
+                  <div className="w-1/4 h-full bg-[#1a1a1a]"></div>
+                  <div className="w-1/4 h-full bg-[#fafafa]"></div>
+                  <div className="w-1/4 h-full bg-[#007A3D]"></div>
+                  <div className="w-1/4 h-full bg-[#CE1126]"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden sm:flex">
-          <span className="text-xs text-[#6b7280] uppercase tracking-wider">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[#6b7280] to-transparent" />
         </div>
       </section>
 
+      {/* Scrolling Marquee */}
+      <div className="bg-[#1a1a1a] py-4 border-y border-white/10 overflow-hidden">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className="flex items-center space-x-8 sm:space-x-12">
+              <span className="text-white/20 font-black text-xl sm:text-3xl uppercase tracking-tighter pl-8 sm:pl-12">Learn the stomp</span>
+              <span className="text-[#CE1126] text-xl sm:text-3xl">●</span>
+              <span className="text-white/20 font-black text-xl sm:text-3xl uppercase tracking-tighter">Connect with roots</span>
+              <span className="text-[#CE1126] text-xl sm:text-3xl">●</span>
+              <span className="text-white/20 font-black text-xl sm:text-3xl uppercase tracking-tighter">Master the rhythm</span>
+              <span className="text-[#CE1126] text-xl sm:text-3xl">●</span>
+              <span className="text-white/20 font-black text-xl sm:text-3xl uppercase tracking-tighter">Heritage in motion</span>
+              <span className="text-[#CE1126] text-xl sm:text-3xl">●</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Social Proof Section */}
-      <section className="py-12 sm:py-20 border-y border-[#e5e7eb]">
+      <section className="py-16 sm:py-24 border-b border-[#e5e7eb]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-16">
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-[#CE1126] mb-2">500+</div>
-              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Students Enrolled</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-[#007A3D] mb-2">15</div>
-              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">HD Lessons</div>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-4xl sm:text-5xl md:text-6xl font-black text-[#1a1a1a] mb-2">
-                4.9 <StarIcon />
-              </div>
-              <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Average Rating</div>
-            </div>
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase text-[#007A3D] mb-4">What Students Say</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight">
+              Real Results
+            </h2>
           </div>
 
           {/* Testimonials */}
@@ -287,46 +285,17 @@ export default function Home() {
               { quote: "As a diaspora Palestinian, this course helped me reconnect with my culture in a meaningful way. Highly recommend!", author: "Leila M.", location: "Toronto, CA" },
               { quote: "The instructor breaks down every move perfectly. I went from zero to leading the dabka line in two months.", author: "Omar S.", location: "London, UK" }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-[#ffffff] border border-[#e5e7eb] p-4 sm:p-6 hover:border-[#CE1126] transition-colors">
-                <div className="flex gap-1 mb-3 sm:mb-4">
+              <div key={index} className="bg-white border-2 border-[#e5e7eb] p-6 sm:p-8 hover:border-[#CE1126] transition-colors">
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#CE1126]"><StarIcon /></span>
                   ))}
                 </div>
-                <p className="text-sm sm:text-base text-[#1a1a1a] mb-3 sm:mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
-                <div className="text-xs sm:text-sm">
-                  <span className="text-[#1a1a1a] font-semibold">{testimonial.author}</span>
-                  <span className="text-[#6b7280]"> - {testimonial.location}</span>
+                <p className="text-[#1a1a1a] mb-6 text-sm sm:text-base">&ldquo;{testimonial.quote}&rdquo;</p>
+                <div className="text-sm">
+                  <span className="text-[#1a1a1a] font-black uppercase tracking-wide">{testimonial.author}</span>
+                  <span className="text-[#6b7280]"> — {testimonial.location}</span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What You'll Learn Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
-              What You&apos;ll Learn
-            </h2>
-            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
-              A comprehensive curriculum designed to take you from complete beginner to confident performer.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-[#ffffff] border border-[#e5e7eb] p-5 sm:p-8 hover:border-[#CE1126] transition-all group"
-              >
-                <div className="text-[#CE1126] mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold uppercase mb-2">{feature.title}</h3>
-                <p className="text-sm sm:text-base text-[#6b7280]">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -334,33 +303,34 @@ export default function Home() {
       </section>
 
       {/* Course Preview Section */}
-      <section className="py-16 sm:py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
+      <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
-              Course Curriculum
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase text-[#007A3D] mb-4">The Curriculum</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+              15 Lessons. 3 Chapters.
             </h2>
-            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
-              Three chapters, fifteen lessons, unlimited replays. Your journey to mastering dabka starts here.
+            <p className="text-base sm:text-lg text-[#6b7280] max-w-2xl mx-auto">
+              Your journey to mastering dabka starts here. Structured progression from basics to performance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
             {chapters.map((chapter) => (
               <div
                 key={chapter.number}
-                className="bg-[#fafafa] border border-[#e5e7eb] overflow-hidden hover:border-[#007A3D] transition-colors"
+                className="bg-[#fafafa] border-2 border-[#e5e7eb] overflow-hidden hover:border-[#CE1126] transition-colors group"
               >
-                <div className="p-4 sm:p-6 border-b border-[#e5e7eb]">
+                <div className="p-6 border-b-2 border-[#e5e7eb] bg-white">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider">Chapter {chapter.number}</span>
-                    <span className="text-xs sm:text-sm text-[#007A3D]">{chapter.lessons} Lessons</span>
+                    <span className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase text-[#6b7280]">Chapter {chapter.number}</span>
+                    <span className="text-[10px] sm:text-xs font-black text-[#007A3D]">{chapter.lessons} Lessons</span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold uppercase">{chapter.title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight group-hover:text-[#CE1126] transition-colors">{chapter.title}</h3>
                 </div>
-                <ul className="p-4 sm:p-6 space-y-2 sm:space-y-3">
+                <ul className="p-6 space-y-3">
                   {chapter.topics.map((topic, index) => (
-                    <li key={index} className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-[#6b7280]">
+                    <li key={index} className="flex items-center gap-3 text-sm sm:text-base text-[#6b7280]">
                       <span className="text-[#007A3D] flex-shrink-0"><CheckIcon /></span>
                       {topic}
                     </li>
@@ -372,87 +342,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Instructor Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Instructor Image Placeholder */}
-            <div className="relative mx-4 sm:mx-0">
-              <div className="aspect-square bg-[#ffffff] border border-[#e5e7eb]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-sm sm:text-base text-[#6b7280] uppercase tracking-wider">Instructor Photo</span>
-                </div>
-              </div>
-              {/* Decorative Elements */}
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-full h-full border-2 border-[#CE1126] -z-10" />
-            </div>
-
-            {/* Instructor Info */}
-            <div className="mt-6 lg:mt-0">
-              <span className="text-xs sm:text-sm text-[#CE1126] uppercase tracking-wider mb-3 sm:mb-4 block">Meet Your Instructor</span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-4 sm:mb-6">
-                Khalil Nassar
-              </h2>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-lg text-[#6b7280]">
-                <p>
-                  With over 15 years of experience performing and teaching dabka, Khalil has dedicated his life to preserving and sharing Palestinian cultural traditions.
-                </p>
-                <p>
-                  Born in Ramallah and now based in the United States, he has performed at hundreds of events and taught thousands of students both in-person and online.
-                </p>
-                <p>
-                  His teaching style combines traditional techniques with modern pedagogy, making the art of dabka accessible to everyone regardless of their background or experience level.
-                </p>
-              </div>
-              <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-4 sm:gap-6">
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl sm:text-3xl font-black text-[#CE1126]">15+</div>
-                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Years Teaching</div>
-                </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl sm:text-3xl font-black text-[#007A3D]">1000+</div>
-                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Students Taught</div>
-                </div>
-                <div className="text-center sm:text-left">
-                  <div className="text-2xl sm:text-3xl font-black text-[#1a1a1a]">50+</div>
-                  <div className="text-xs sm:text-sm text-[#6b7280] uppercase">Events Performed</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-16 sm:py-24 bg-[#ffffff] border-y border-[#e5e7eb]">
+      <section className="py-16 sm:py-24 bg-[#fafafa] border-y border-[#e5e7eb]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
-              Get Started Today
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase text-[#007A3D] mb-4">Get Started</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+              One Price. Lifetime Access.
             </h2>
-            <p className="text-base sm:text-xl text-[#6b7280] max-w-2xl mx-auto px-2">
-              One-time payment, lifetime access. No subscriptions, no hidden fees.
+            <p className="text-base sm:text-lg text-[#6b7280]">
+              No subscriptions. No hidden fees. Just pure dabka mastery.
             </p>
           </div>
 
-          <div className="max-w-lg mx-auto px-2 sm:px-0">
-            <div className="bg-[#fafafa] border-2 border-[#CE1126] p-5 sm:p-8 relative">
-              {/* Popular Badge */}
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CE1126] px-3 sm:px-4 py-1">
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white whitespace-nowrap">Best Value</span>
+          <div className="max-w-lg mx-auto">
+            <div className="bg-white border-4 border-[#1a1a1a] p-6 sm:p-10 relative">
+              {/* Badge */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CE1126] px-4 py-1">
+                <span className="text-xs font-black uppercase tracking-wider text-white">Best Value</span>
               </div>
 
-              <div className="text-center mb-6 sm:mb-8 pt-2">
-                <div className="text-xs sm:text-sm text-[#6b7280] uppercase tracking-wider mb-2">Complete Course</div>
+              <div className="text-center mb-8">
+                <p className="text-xs font-black tracking-[0.2em] uppercase text-[#6b7280] mb-2">Complete Course</p>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-4xl sm:text-5xl md:text-6xl font-black">$29.99</span>
+                  <span className="text-5xl sm:text-6xl font-black">$29.99</span>
                 </div>
-                <div className="text-sm sm:text-base text-[#6b7280] mt-2">One-time payment</div>
+                <p className="text-[#6b7280] mt-2 text-sm">One-time payment</p>
               </div>
 
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <ul className="space-y-4 mb-8">
                 {pricingIncludes.map((item, index) => (
-                  <li key={index} className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
+                  <li key={index} className="flex items-center gap-3 text-sm sm:text-base">
                     <span className="text-[#007A3D] flex-shrink-0"><CheckIcon /></span>
                     <span>{item}</span>
                   </li>
@@ -461,12 +381,12 @@ export default function Home() {
 
               <Link
                 href="/checkout"
-                className="block w-full py-4 bg-[#CE1126] text-white text-sm sm:text-base font-bold uppercase tracking-wider text-center hover:bg-[#a30d1e] transition-colors min-h-[52px] flex items-center justify-center"
+                className="block w-full py-4 sm:py-5 bg-[#CE1126] text-white font-black uppercase tracking-wider text-center text-sm hover:bg-[#a30d1e] transition-colors"
               >
                 Enroll Now
               </Link>
 
-              <p className="text-center text-xs sm:text-sm text-[#6b7280] mt-4">
+              <p className="text-center text-xs text-[#6b7280] mt-4">
                 30-day money-back guarantee. Risk-free.
               </p>
             </div>
@@ -475,25 +395,25 @@ export default function Home() {
       </section>
 
       {/* Pop-Up Classes Teaser */}
-      <section className="py-12 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-[#CE1126]/10 to-[#007A3D]/10 border border-[#e5e7eb] p-5 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-8">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
+          <div className="bg-[#1a1a1a] p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-start gap-4 sm:gap-6">
               <div className="text-[#CE1126] flex-shrink-0">
                 <MapPinIcon />
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase mb-2">
+                <h3 className="text-2xl sm:text-3xl font-black uppercase text-white mb-2">
                   In-Person Pop-Up Classes
                 </h3>
-                <p className="text-sm sm:text-lg text-[#6b7280]">
+                <p className="text-white/70 text-sm sm:text-base">
                   Join us for live workshops in cities across the nation. Experience dabka with a community.
                 </p>
               </div>
             </div>
             <Link
               href="/classes"
-              className="w-full sm:w-auto shrink-0 px-6 sm:px-8 py-4 bg-transparent border-2 border-[#1a1a1a] text-[#1a1a1a] text-sm sm:text-base font-bold uppercase tracking-wider hover:bg-[#1a1a1a] hover:text-[#fafafa] transition-colors text-center min-h-[52px] flex items-center justify-center"
+              className="shrink-0 w-full md:w-auto px-8 py-4 bg-white text-[#1a1a1a] font-black uppercase tracking-wider text-sm text-center hover:bg-[#CE1126] hover:text-white transition-colors"
             >
               View Schedule
             </Link>
@@ -502,28 +422,26 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-24 bg-[#ffffff] border-t border-[#e5e7eb]">
+      <section className="py-16 sm:py-24 bg-white border-t border-[#e5e7eb]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight mb-3 sm:mb-4">
-              Frequently Asked Questions
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase text-[#007A3D] mb-4">Questions?</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight">
+              FAQ
             </h2>
-            <p className="text-base sm:text-xl text-[#6b7280]">
-              Got questions? We&apos;ve got answers.
-            </p>
           </div>
 
-          <div className="divide-y divide-[#e5e7eb] border-t border-[#e5e7eb]">
+          <div className="divide-y divide-[#e5e7eb] border-t border-b border-[#e5e7eb]">
             {faqs.map((faq, index) => (
               <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
 
-          <div className="text-center mt-8 sm:mt-12">
-            <p className="text-sm sm:text-base text-[#6b7280] mb-4">Still have questions?</p>
+          <div className="text-center mt-10 sm:mt-12">
+            <p className="text-[#6b7280] mb-4 text-sm">Still have questions?</p>
             <Link
               href="/contact"
-              className="text-[#CE1126] text-sm sm:text-base font-bold uppercase tracking-wider hover:underline min-h-[44px] inline-flex items-center"
+              className="text-[#CE1126] font-black uppercase tracking-wider hover:underline text-sm"
             >
               Contact Us
             </Link>
@@ -532,25 +450,36 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 sm:py-24 border-t border-[#e5e7eb]">
+      <section className="py-16 sm:py-24 bg-[#1a1a1a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tight mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">
             Ready to Start Your
             <span className="block text-[#CE1126]">Dabka Journey?</span>
           </h2>
-          <p className="text-base sm:text-xl text-[#6b7280] mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
+          <p className="text-base sm:text-lg text-white/70 mb-10 sm:mb-12 max-w-2xl mx-auto">
             Join hundreds of students who have already mastered the art of Palestinian traditional dance.
           </p>
           <Link
             href="/checkout"
-            className="inline-block w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 bg-[#CE1126] text-white text-base sm:text-xl font-bold uppercase tracking-wider hover:bg-[#a30d1e] transition-colors min-h-[52px]"
+            className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#CE1126] text-white text-sm sm:text-base font-black uppercase tracking-wider hover:bg-[#a30d1e] transition-colors"
           >
-            Enroll Now - $29.99
+            Enroll Now — $29.99
           </Link>
         </div>
       </section>
 
       <Footer />
+
+      {/* Marquee Animation Styles */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 20s linear infinite;
+        }
+      `}</style>
     </div>
   );
 }

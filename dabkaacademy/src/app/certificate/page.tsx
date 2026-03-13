@@ -75,6 +75,14 @@ export default function CertificatePage() {
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
+      {/* Palestinian Flag Stripe - Top */}
+      <div className="fixed top-0 left-0 right-0 h-1 flex z-[60]">
+        <div className="flex-1 bg-[#1a1a1a]"></div>
+        <div className="flex-1 bg-[#fafafa]"></div>
+        <div className="flex-1 bg-[#007A3D]"></div>
+        <div className="flex-1 bg-[#CE1126]"></div>
+      </div>
+
       <Navbar />
 
       <main className="pt-20 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
@@ -82,7 +90,7 @@ export default function CertificatePage() {
 
           {/* Celebration Header */}
           <div className="text-center mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#007A3D]/10 border border-[#007A3D]/30 rounded-full mb-4 sm:mb-6">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#007A3D]/10 border-2 border-[#007A3D]/30 mb-4 sm:mb-6">
               <CheckIcon />
               <span className="text-[#007A3D] text-xs sm:text-sm font-medium uppercase tracking-wide">
                 Course Completed
@@ -100,18 +108,18 @@ export default function CertificatePage() {
           {/* Certificate Display */}
           <div className="relative mb-8 sm:mb-12">
             {/* Outer glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#CE1126]/10 to-[#007A3D]/10 rounded-2xl blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#CE1126]/10 to-[#007A3D]/10 blur-3xl" />
 
             {/* Certificate Card */}
-            <div className="relative bg-gradient-to-br from-[#f5f5f5] to-[#ffffff] rounded-xl sm:rounded-2xl border border-[#e5e7eb] p-1.5 sm:p-2 md:p-3 shadow-xl">
+            <div className="relative bg-gradient-to-br from-[#f5f5f5] to-[#ffffff] border-2 border-[#1a1a1a] p-1.5 sm:p-2 md:p-3 shadow-[8px_8px_0_0_#1a1a1a]">
               {/* Certificate Inner - Premium Design */}
               <div
                 id="certificate"
-                className="relative bg-[#fafafa] rounded-xl overflow-hidden"
+                className="relative bg-[#fafafa] overflow-hidden"
                 style={{ aspectRatio: "1.414/1" }}
               >
                 {/* Decorative border */}
-                <div className="absolute inset-4 sm:inset-6 border-2 border-[#1a1a1a]/20 rounded-lg" />
+                <div className="absolute inset-4 sm:inset-6 border-2 border-[#1a1a1a]/20 " />
                 <div className="absolute inset-6 sm:inset-8 border border-[#1a1a1a]/10 rounded" />
 
                 {/* Corner decorations - Palestinian embroidery inspired */}
@@ -216,7 +224,7 @@ export default function CertificatePage() {
             {/* Download Button */}
             <button
               onClick={handleDownload}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 bg-[#CE1126] hover:bg-[#a80d1e] text-white text-sm sm:text-base font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105 min-h-[52px]"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 bg-[#CE1126] hover:bg-[#a80d1e] text-white text-sm sm:text-base font-bold uppercase tracking-wide  transition-all hover:scale-105 min-h-[52px]"
             >
               <DownloadIcon />
               Download Certificate
@@ -227,21 +235,21 @@ export default function CertificatePage() {
               <span className="text-[#6b7280] text-xs sm:text-sm hidden sm:inline">Share:</span>
               <button
                 onClick={() => handleShare("instagram")}
-                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a]  transition-colors"
                 aria-label="Share on Instagram"
               >
                 <InstagramIcon />
               </button>
               <button
                 onClick={() => handleShare("twitter")}
-                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a]  transition-colors"
                 aria-label="Share on Twitter"
               >
                 <TwitterIcon />
               </button>
               <button
                 onClick={() => handleShare("linkedin")}
-                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a] rounded-lg transition-colors"
+                className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#f5f5f5] border border-[#e5e7eb] text-[#1a1a1a]  transition-colors"
                 aria-label="Share on LinkedIn"
               >
                 <LinkedInIcon />
@@ -251,22 +259,22 @@ export default function CertificatePage() {
 
           {/* Stats Summary */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10 sm:mb-16">
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+            <div className="bg-[#ffffff] border border-[#e5e7eb]  p-4 sm:p-6 text-center">
               <p className="text-3xl sm:text-4xl font-black text-[#007A3D] mb-1 sm:mb-2">15</p>
               <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Lessons Completed</p>
             </div>
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+            <div className="bg-[#ffffff] border border-[#e5e7eb]  p-4 sm:p-6 text-center">
               <p className="text-3xl sm:text-4xl font-black text-[#CE1126] mb-1 sm:mb-2">{totalWatchTime}</p>
               <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Hours Watch Time</p>
             </div>
-            <div className="bg-[#ffffff] border border-[#e5e7eb] rounded-xl p-4 sm:p-6 text-center">
+            <div className="bg-[#ffffff] border border-[#e5e7eb]  p-4 sm:p-6 text-center">
               <p className="text-base sm:text-lg font-bold text-[#1a1a1a] mb-1 sm:mb-2">{completionDate}</p>
               <p className="text-[#6b7280] text-xs sm:text-sm uppercase tracking-wide">Completed On</p>
             </div>
           </div>
 
           {/* Pop-up Classes CTA */}
-          <div className="bg-gradient-to-r from-[#CE1126]/5 via-[#ffffff] to-[#007A3D]/5 border border-[#e5e7eb] rounded-2xl p-5 sm:p-8 md:p-12 text-center">
+          <div className="bg-gradient-to-r from-[#CE1126]/5 via-[#ffffff] to-[#007A3D]/5 border border-[#e5e7eb]  p-5 sm:p-8 md:p-12 text-center">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-[#1a1a1a] uppercase tracking-tight mb-3 sm:mb-4">
               Keep the Momentum Going
             </h3>
@@ -278,7 +286,7 @@ export default function CertificatePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/pop-up-classes"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-105 min-h-[52px]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 bg-[#1a1a1a] hover:bg-[#333333] text-[#fafafa] text-sm sm:text-base font-bold uppercase tracking-wide  transition-all hover:scale-105 min-h-[52px]"
               >
                 Find Pop-Up Classes
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,7 +295,7 @@ export default function CertificatePage() {
               </Link>
               <Link
                 href="/dashboard"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-4 border border-[#e5e7eb] hover:border-[#1a1a1a]/30 text-[#1a1a1a] text-sm sm:text-base font-medium uppercase tracking-wide rounded-lg transition-colors min-h-[52px]"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-4 border border-[#e5e7eb] hover:border-[#1a1a1a]/30 text-[#1a1a1a] text-sm sm:text-base font-medium uppercase tracking-wide  transition-colors min-h-[52px]"
               >
                 Back to Dashboard
               </Link>
